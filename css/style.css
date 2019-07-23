@@ -25,12 +25,35 @@ body {
     width: 100%;
 }
 
-h1,h2, h3, p, li, #role {
+h1, h2, h3, h4, h5, p, li, #role {
+    padding: 0 16px;
     background-color: var(--secondary); 
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin: 0 0 10px;
+}
+
+h4 {
+    font-weight: 400;
+    margin: 0 0;
+}
+
+h5 {
+    margin: 0 0;
 }
 
 p {
     font-size: 12px;
+    margin-bottom: 40px;
 }
 
 a {
@@ -43,7 +66,7 @@ a {
 
 .hero {
     display: grid; 
-    grid-template-columns: auto auto 1fr; 
+    grid-template-columns: auto 1fr; 
     grid-template-rows: 1fr; 
     grid-column-gap: 20px;
     grid-row-gap: 0px;
