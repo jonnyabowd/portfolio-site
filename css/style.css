@@ -1,0 +1,79 @@
+:root {
+    --primary: hsl(32, 98%, 56%);
+    --secondary: hsl(0, 0%, 0%);
+    --accent: hsl(120, 1%, 14%);
+    --grey-med: hsl(222, 10%, 74%);
+    --grey-lt: hsl(222, 10%, 84%);
+    --font-base: 'Space Mono', monospace;
+    --font-display: 'Teko', sans-serif;
+}
+
+html,
+body {
+    background: repeating-linear-gradient(135deg,
+        var(--accent),
+        var(--accent) 1px,
+        var(--secondary) 2px,
+        var(--secondary) 10px);
+    color: var(--primary);
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    width: 100%;
+}
+
+h1,h2, h3, p, li, #role {
+    background-color: var(--secondary); 
+}
+
+p {
+    font-size: 12px;
+}
+
+a {
+    color: var(--primary);
+}
+
+.content {
+    max-width: 940px;
+}
+
+.hero {
+    display: grid; 
+    grid-template-columns: auto auto 1fr; 
+    grid-template-rows: 1fr; 
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    align-items: center;
+}
+
+.profileImage {
+    width: 150px;
+    border-radius: 50%;
+    border: 20px solid var(--secondary);
+}
+
+.jobs, .skills {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr auto; 
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    padding-bottom: 40px;
+}
+
+.education {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr auto; 
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    padding-bottom: 40px;
+}
+
+.contact {
+    padding-bottom: 40px;
+}
