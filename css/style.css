@@ -25,39 +25,55 @@ body {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, p, li, #role {
+h1, h2, h3, h4, h5, p, #role {
     padding: 0 16px;
     background-color: var(--secondary); 
 }
 
 h1 {
     margin-bottom: 10px;
+    border-top: 1px solid var(--accent);
 }
 
 h2 {
     margin-bottom: 20px;
+    border-top: 1px solid var(--accent);
 }
 
 h3 {
     margin: 0 0 10px;
+    border-top: 1px solid var(--accent);
 }
 
 h4 {
     font-weight: 400;
     margin: 0 0;
+    border-top: 1px solid var(--accent);
 }
 
 h5 {
-    margin: 0 0;
+    margin: 0 0 10px;
 }
 
 p {
     font-size: 12px;
-    margin-bottom: 40px;
+    margin: 0 0 40px;
+    border-top: 1px solid var(--accent);
 }
 
 a {
     color: var(--primary);
+}
+
+ul {
+    list-style: circle;
+    background-color: var(--secondary);
+    border-top: 1px solid var(--accent);
+}
+
+#role {
+    font-size: 20px;
+    border-top: 1px solid var(--accent);
 }
 
 .content {
@@ -77,6 +93,7 @@ a {
     width: 150px;
     border-radius: 50%;
     border: 20px solid var(--secondary);
+    margin-top: -20px;
 }
 
 .jobs, .skills {
