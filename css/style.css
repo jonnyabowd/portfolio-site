@@ -10,7 +10,9 @@
 
 html,
 body {
-    background-color: var(--secondary);
+    background-color: var(--primary);
+    -webkit-box-shadow: inset 0px 0px 0px 16px var(--secondary);
+    box-shadow: inset 0px 0px 0px 16px var(--secondary);
     color: var(--primary);
     font-family: 'Space Mono', monospace;
     display: flex;
@@ -19,6 +21,7 @@ body {
     align-items: center;
     margin: 0px;
     width: 100%;
+    min-height: 100vh;
 }
 
 h1,
