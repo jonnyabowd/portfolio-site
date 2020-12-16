@@ -10,11 +10,7 @@
 
 html,
 body {
-    background: repeating-linear-gradient(135deg,
-        var(--accent),
-        var(--accent) 1px,
-        var(--secondary) 2px,
-        var(--secondary) 10px);
+    background-color: var(--secondary);
     color: var(--primary);
     font-family: 'Space Mono', monospace;
     display: flex;
@@ -25,9 +21,15 @@ body {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, p, #role {
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+#role {
     padding: 0 16px;
-    background-color: var(--secondary); 
+    background-color: var(--secondary);
 }
 
 h1 {
@@ -81,9 +83,9 @@ ul {
 }
 
 .hero {
-    display: grid; 
-    grid-template-columns: auto 1fr; 
-    grid-template-rows: 1fr; 
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
     align-items: center;
@@ -96,19 +98,20 @@ ul {
     margin-top: -20px;
 }
 
-.jobs, .skills {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr auto; 
+.jobs,
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
     padding-bottom: 40px;
 }
 
 .education {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
     padding-bottom: 40px;
