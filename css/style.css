@@ -15,7 +15,7 @@
 html,
 body {
     background-image: url("../images/ja-background.svg");
-    background-color: var(--primary);
+    background-color: var(--secondary);
     -webkit-box-shadow: inset 0px 0px 0px 8px var(--accent);
     box-shadow: inset 0px 0px 0px 8px var(--accent);
     color: var(--primary);
@@ -101,7 +101,8 @@ h2.title {
 
 .smile {
     font-family: var(--font-base);
-    font-size: 64px;
+    font-size: 56px;
+    margin: 50px 0;
 }
 
 .body {
@@ -163,7 +164,10 @@ p.bio {
     letter-spacing: 1px;
     font-weight: 800;
     padding: 8px 32px 8px 40px;
-    border: 8px solid var(--accent);
+    border-top: 8px solid var(--accent);
+    border-right: 8px solid var(--accent);
+    border-bottom: 8px solid var(--accent);
+    border-left: 8px solid var(--accent);
     border-radius: 40px 0 0 0;
     display: flex;
     align-content: center;
@@ -265,8 +269,16 @@ p.bio {
 
 /* phone styles */
 @media (max-width: 576px) {
+
+    html,
+    body {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
     .profile {
         padding: 80px 32px 32px;
+        box-shadow: var(--shadow-low);
         margin: 30px;
     }
 
@@ -277,6 +289,7 @@ p.bio {
     .pill {
         width: 100%;
         font-size: 12px;
+        box-shadow: none;
         padding: 16px 24px 16px 110px;
         margin-right: 0px;
     }
@@ -324,7 +337,9 @@ p.bio {
 
     .built-by {
         font-size: 10px;
-        padding: 4px 24px 4px 32px;
+        padding: 8px 24px 8px 32px;
+        border-right: none;
+        border-bottom: none;
     }
 
     .heart {
