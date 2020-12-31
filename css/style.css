@@ -118,6 +118,12 @@ p.bio {
     word-spacing: .2rem;
 }
 
+.contact-text-link {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+}
+
 .contact {
     display: flex;
     flex-direction: column;
