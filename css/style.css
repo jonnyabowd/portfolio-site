@@ -121,7 +121,6 @@ p.bio {
 .contact-text-link {
     color: var(--primary);
     text-decoration: none;
-    /* text-decoration-skip: spaces; */
     border-bottom: 2px solid var(--accent);
 }
 
