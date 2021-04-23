@@ -1,0 +1,20 @@
+<svg width="2205" height="1068" viewBox="0 0 2205 1068" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="2205" height="1068" fill="url(#paint0_linear)"/>
+<g opacity="0.1">
+<path d="M-413.382 613.823V756.837L1767.37 756.837V613.823H-413.382Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M-413.376 848.824V756.839L1767.37 756.839V848.824L-413.376 848.824Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M-413.377 685.313V756.833L1767.37 756.833V685.313H-413.377Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M1767.37 1194V848.825L-413.376 848.825L-413.376 1194" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M646.926 613.829V756.843H1767.37V613.829H646.926Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M1767.37 613.8V-234.801H1671.4V613.8H1767.37Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M2049.1 -815L2049.1 1194" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M1767.38 1194L1767.38 -815" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M2049.1 -815V189.499H1767.38V-815" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="2161.71" y2="1149.42" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1E2B33"/>
+<stop offset="1" stop-color="#0B1013"/>
+</linearGradient>
+</defs>
+</svg>

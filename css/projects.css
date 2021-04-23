@@ -1,0 +1,317 @@
+:root {
+    --primary: hsl(29, 87%, 56%);
+    --secondary: hsl(29, 100%, 11%);
+    --accent: hsl(29, 100%, 25%);
+    --grey-med: hsl(222, 10%, 74%);
+    --grey-lt: hsl(222, 10%, 84%);
+    --font-base: 'Merriweather', serif;
+    --font-base-sans: 'Merriweather Sans', sans-serif;
+    --font-display: 'Bebas Neue', serif;
+    --shadow-low: 0px 20px 0px rgba(0, 0, 0, 0.25);
+    --shadow-high: 0px 60px 0px rgba(0, 0, 0, 0.25);
+    ;
+}
+
+html,
+body {
+    color: var(--secondary);
+    font-family: var(--font-base-sans);
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: 48px;
+}
+
+.btn-close {
+    color: var(--primary);
+    opacity: 100%;
+}
+
+h2 {
+    font-size: 16px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: "• ";
+    color: var(--accent);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.2em;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: var(--secondary);
+    border: 2px solid var(--accent);
+    border-radius: 36px;
+    padding: 8px 32px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:focus {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem var(--secondary);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    border-radius: 36px;
+    padding: 8px 32px;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--primary);
+}
+
+.btn-secondary:focus {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.25rem var(--primary);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+
+/* shoppingmobileapp styles */
+
+.shoppingmobileapp-image-container {
+    background-color: #EBFFFE;
+    background: url(/images/project-images/shopping-background.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.context-box {
+    background: #000000;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25), 0px 16px 32px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 22px;
+    padding: 16px 16px 8px;
+    margin-bottom: 16px;
+}
+
+.context-box>h2 {
+    font-size: 24px;
+    text-transform: none;
+    color: #ffffff;
+    text-align: center;
+}
+
+.context-box>p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.context-box>ul>li {
+    font-size: 14px;
+    color: #ffffff;
+    padding-top: 16px;
+}
+
+.context-box>ul>li::before {
+    color: var(--grey-med);
+}
+
+/* huey styles */
+
+.huey-image-container {
+    background-color: #000000;
+    background: url(/images/project-images/huey-background.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+/* auto loan tools styles */
+
+.autoloantools-image-container-1 {
+    background-color: #000000;
+    background: url(/images/project-images/autoloantools-background1.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.autoloantools-image-container-2 {
+    background-color: #000000;
+    background: url(/images/project-images/autoloantools-background2.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+/* connecting flight styles */
+
+.connectingflight-image-container-1 {
+    background-color: #000000;
+    background: url(/images/project-images/connectingflight-background1.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.connectingflight-image-container-2 {
+    background-color: #000000;
+    background: url(/images/project-images/connectingflight-background2.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+/* skylanders styles */
+
+.skylanders-image-container {
+    background-color: #000000;
+    background: url(/images/project-images/skylanders3Dadventure-background.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+/* generator styles */
+
+.round-corners {
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.generator-image-container1 {
+    background-color: #000000;
+    background: url(/images/project-images/generator-background1.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.generator-image-container2 {
+    background-color: #000000;
+    background: url(/images/project-images/generator-background2.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.generator-image-container3 {
+    background-color: #000000;
+    background: url(/images/project-images/generator-background3.svg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    border-radius: 32px;
+}
+
+.generator-image-container4 {
+    background-color: #f2f2f2;
+    background-color: #ffffff;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+/* monster project styles */
+
+.monster-image-container {
+    background-color: #ffffff;
+    background-color: #e9e9e9;
+    /* background-color: #323232; */
+    /* border-radius: 32px; */
+    overflow: hidden;
+}
+
+.monster-image {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+.monstats {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(5, auto);
+    grid-column-gap: 0;
+    grid-row-gap: 1px;
+    background-color: var(--grey-lt);
+    padding: 0;
+}
+
+.leftstat {
+    color: var(--accent);
+    background-color: #ffffff;
+    padding: 8px 0 8px;
+}
+
+.rightstat {
+    background-color: #ffffff;
+    padding: 8px 0 8px;
+}
+
+/* visual design project styles */
+
+.visual-design-image-container {
+    background-color: #e9e9e9;
+    border-radius: 32px;
+    overflow: hidden;
+}
