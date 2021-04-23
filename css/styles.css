@@ -20,13 +20,16 @@ body {
     box-shadow: inset 0px 0px 0px 8px var(--accent);
     color: var(--primary);
     font-family: var(--font-base-sans);
-    display: flex;
+    box-sizing: border-box;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: 0px;
-    width: 100%;
-    height: 100vh;
+    align-items: center; */
+    /* margin: 0px; */
+    /* width: 100%; */
+    /* position: absolute; */
+    /* min-height: 100vh; */
+    overflow: scroll;
     perspective: 1000px;
     perspective-origin: 50% 50%;
     -webkit-animation: animation 300s linear infinite;
@@ -56,13 +59,19 @@ body {
 
 /* page styles */
 
+.hr {
+    background-color: var(--accent);
+    height: 2px;
+    margin: 40px 0;
+}
+
 .profile {
     background: var(--secondary);
     border: 8px solid var(--accent);
     box-shadow: var(--shadow-high);
     padding: 80px 64px 56px;
-    margin: 60px;
-    max-width: 800px;
+    margin: 120px 60px;
+    max-width: 1200px;
 }
 
 .heroes {
@@ -99,6 +108,10 @@ h2.title {
     margin: 0 0 30px;
 }
 
+h2 {
+    font-size: 40px;
+}
+
 .smile {
     font-family: var(--font-base);
     font-size: 56px;
@@ -106,8 +119,6 @@ h2.title {
 
 .body {
     display: flex;
-    padding-top: 40px;
-    border-top: 2px solid var(--accent);
 }
 
 p.bio {
@@ -124,6 +135,11 @@ p.bio {
     border-bottom: 2px solid var(--accent);
 }
 
+.contact-text-link:hover {
+    color: var(--primary);
+}
+
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -131,6 +147,70 @@ p.bio {
     align-content: space-between;
     justify-content: flex-end;
     min-width: 120px;
+}
+
+p.contact-info {
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 800;
+    word-spacing: .2rem;
+}
+
+input,
+textarea {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    color: var(--primary);
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+    min-height: 200px;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid var(--accent);
+    /* border-color: var(--secondary); */
+    outline: 4px;
+}
+
+.form-container {
+    background-color: var(--secondary);
+    border: 2px solid var(--accent);
+}
+
+.form-label {
+    font-family: var(--font-display);
+    font-size: 32px;
+    line-height: 40px;
+    color: var(--primary);
+    margin: 0px;
+}
+
+.btn-custom,
+.btn-custom:focus {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--secondary);
+    border: 2px solid var(--primary);
+    border-radius: 36px;
+    padding: 8px 32px;
+    text-decoration: none;
+}
+
+.btn-custom:hover,
+.btn-custom:active {
+    background-color: var(--secondary);
+    border-color: var(--primary);
+    color: var(--primary);
+    border: 2px solid var(--accent);
 }
 
 .links {
@@ -184,6 +264,79 @@ p.bio {
 .heart {
     height: 16px;
     padding: 0 6px;
+}
+
+/* project preview styles */
+
+.project-preview {
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 12px;
+    /* border-radius: 8px; */
+    color: var(--primary);
+    text-decoration: none;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-preview::after {
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-preview:hover {
+    color: var(--primary);
+    text-decoration: none;
+    -moz-box-shadow: inset 0 0 0 2px var(--accent);
+    -webkit-box-shadow: inset 0 0 0 2px var(--accent);
+    box-shadow: inset 0 0 0 2px var(--accent);
+}
+
+.project-preview:hover::after {
+    opacity: 1;
+}
+
+.project-preview:visited {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.project-icon-container {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    border-color: var(--primary);
+    border: 2px solid var(--accent);
+}
+
+.project-icon {
+    width: 40px;
+}
+
+.project-title {
+    font-size: 28px;
+    font-family: var(--font-display);
+    line-height: 100%;
+    max-width: 136px;
+    margin: 0;
+}
+
+/* client styles */
+
+.client-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 140px;
 }
 
 /* animations */
@@ -243,6 +396,73 @@ p.bio {
     }
 }
 
+
+/* Flying Object */
+
+.flier {
+    pointer-events: none;
+}
+
+.flier>* {
+    /* Adjust animation duration to change the element’s speed */
+    animation: fly 50s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0);
+    position: fixed;
+    animation-delay: 1s;
+    z-index: 0;
+}
+
+/* Keyframe values control where the element will begin
+    and end its trajectory across the screen. Each rule
+    represents a path the element follows across the screen. */
+
+
+@keyframes fly {
+
+    98.001%,
+    0% {
+        display: block;
+        transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+    }
+
+    15% {
+        transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+    }
+
+    15.001%,
+    18% {
+        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+    }
+
+    40% {
+        transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+    }
+
+    40.001%,
+    43% {
+        transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+    }
+
+    65% {
+        transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+    }
+
+    65.001%,
+    68% {
+        transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+    }
+
+    95% {
+        transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+    }
+}
+
+
+/* Media Queries */
+
 /* tablet styles */
 @media (max-width: 768px) {
     .heroes {
@@ -270,6 +490,10 @@ p.bio {
         font-size: 12px;
         margin: 0 32px 0 0;
     }
+
+    .client-logo {
+        height: 120px;
+    }
 }
 
 /* phone styles */
@@ -282,9 +506,9 @@ p.bio {
     }
 
     .profile {
-        padding: 80px 32px 32px;
+        padding: 100px 32px 32px;
         box-shadow: var(--shadow-low);
-        margin: 30px;
+        margin: 30px 30px 100px;
     }
 
     .heroes {
@@ -295,7 +519,7 @@ p.bio {
         width: 100%;
         font-size: 12px;
         box-shadow: none;
-        padding: 16px 24px 16px 110px;
+        padding: 16px 24px 16px 100px;
         margin-right: 0px;
     }
 
@@ -307,7 +531,13 @@ p.bio {
     h2.title {
         font-size: 32px;
         text-align: center;
-        margin: 20px 0 20px;
+        margin: 20px 0 0;
+    }
+
+    h2.subtitle {
+        font-size: 32px;
+        text-align: center;
+        margin: 20px 0 0;
     }
 
     .smile {
@@ -349,5 +579,9 @@ p.bio {
     .heart {
         height: 10px;
         padding: 0 6px;
+    }
+
+    .client-logo {
+        height: 90px;
     }
 }

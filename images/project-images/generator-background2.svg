@@ -1,0 +1,27 @@
+<svg width="2205" height="1007" viewBox="0 0 2205 1007" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="2202" height="1007" transform="translate(3)" fill="url(#paint0_linear)"/>
+<g opacity="0.1">
+<path d="M345.757 894.111V1025.75H1858.93V894.111L345.757 894.111Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M345.76 959.914V1025.75H1858.93V959.914L345.76 959.914Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M345.755 -18.6784V47.1533L1858.93 47.1533V-18.6784L345.755 -18.6784Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M345.756 -18.6595V112.979L1858.93 112.979V-18.6595L345.756 -18.6595Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M1081.48 894.117V1025.76H1858.93V894.117H1081.48Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M1081.48 -18.6536V112.985L1858.93 112.985V-18.6536L1081.48 -18.6536Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M1858.93 894.091V112.985H1792.34V894.091H1858.93Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M412.355 894.09L412.355 112.984H345.76L345.76 894.09H412.355Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M2054.42 -421.066V1428.14" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M1858.93 1428.14V-421.066" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M345.761 -421.066L345.761 1428.14" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M150.275 1428.14L150.275 -421.065" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M2054.42 -421.066V503.537H1858.93V-421.066" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M345.761 -421.065L345.761 503.538H150.275L150.275 -421.065" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M2234.75 894.091V112.985H2168.14V894.091H2234.75Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+<path d="M36.536 894.091V112.985H-30.0596V894.091H36.536Z" stroke="#EBDEBA" stroke-width="4" stroke-miterlimit="10"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="2102.35" y2="1183.95" gradientUnits="userSpaceOnUse">
+<stop stop-color="#1E2B33"/>
+<stop offset="1" stop-color="#0B1013"/>
+</linearGradient>
+</defs>
+</svg>

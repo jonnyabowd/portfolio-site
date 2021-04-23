@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/projects.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53404618-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-53404618-1');
+    </script>
+    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+    <title>Jonny’s Forecast</title>
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalLabel">HUEY Weather</h1>
+                <a class="btn-close" href="/index.html"></a>
+            </div>
+            <div class="modal-body w-100 d-flex justify-content-center">
+                <div class="container-fluid">
+                    <div class="row mt-2 mb-5">
+                        <h2 class="modal-subhead">Challenge</h2>
+                        <div class="col-12">
+                            Merging a passion for weather forecasting, minimalist design, and trend analysis, I set out
+                            to
+                            create a web-based 168hr weather data visualization of temperature and chance of
+                            precipitation that is 100% non-alphanumeric. This would condense a large and complicated
+                            amount of data into a simplistic, high-level view that can be quickly interpreted at a
+                            glance.
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-12 col-md-4">
+                            <h2 class="modal-subhead">Technology Used</h2>
+                            <div class="col-12">
+                                <ul>
+                                    <li>
+                                        HTML
+                                    </li>
+                                    <li>
+                                        CSS
+                                    </li>
+                                    <li>
+                                        Vanilla Javascript
+                                    </li>
+                                    <li>
+                                        Darksky API
+                                    </li>
+                                    <li>
+                                        Google Places API
+                                    </li>
+                                    <li>
+                                        Github
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <h2 class="modal-subhead">Solution</h2>
+                            <div class="col-12">
+                                Using a simple color matrix charting temperature and chance of precipitation along the
+                                respective X and Y axes, create a week long cell grid divided by hour and plot the
+                                appropriate color values in the appropriate color cells and indicate which cell
+                                corresponds
+                                to the current time.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-5 mb-5 d-flex justify-content-center huey-image-container">
+                        <div class="col-12 d-flex flex-column">
+                            <img class="col-8 col-md-4 align-self-center" src="/images/project-images/huey-modal.png">
+                        </div>
+                        <div class="col-8 col-md-6 text-center align-self-center context-box">
+                            <p>Simple and beautiful, with a wealth of data to be interpreted at a glance. HUEY enables
+                                you to see trends in the weather around you.</p>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <h2 class="modal-subhead">High-Level Code Logic</h2>
+                        <div class="col-12">
+                            <ul>
+                                <li>
+                                    User enters location
+                                </li>
+                                <li>
+                                    Use Google Places API to determine X,Y coordinates
+                                </li>
+                                <li>
+                                    Fetch data from DarkSky using X, Y coordinates and return extended
+                                    hourly forecast for the next 168 hours (1 week)
+                                </li>
+                                <li>
+                                    Create a 7 x 24 space grid (168 total spaces) within a GUI representing the time (in
+                                    hours) and day
+                                </li>
+                                <li>
+                                    Starting with Sunday at 12am in the top left, use temperature and precipitation for
+                                    each hour to
+                                    style the background color on each space of the grid
+                                </li>
+                                <li>
+                                    Indicate which hour in which day is the current hour
+                                </li>
+                                <li>
+                                    Set timer to rerun application at the top of each hour to update data as long as the
+                                    browser window is open
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row py-5 mb-5 d-flex justify-content-center huey-image-container">
+                        <img class="col-8 col-md-4 order-1 order-md-1" src="/images/project-images/huey-forecast1.png">
+                        <img class="col-8 col-md-4 order-3 order-md-2" src="/images/project-images/huey-forecast2.png">
+                        <img class="col-8 col-md-4 order-5 order-md-3" src="/images/project-images/huey-forecast3.png">
+                        <div class="col-8 col-md-4 text-center align-self-center order-2 order-md-4">
+                            <div class="context-box">
+                                <p>Mt Everest 8pm on a Wednesday in March</p>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-4 text-center align-self-center order-4 order-md-5">
+                            <div class="context-box">
+                                <p>Austin, Texas 7pm on a Monday in March</p>
+                            </div>
+                        </div>
+                        <div class="col-8 col-md-4 text-center align-self-center order-5 order-md-5">
+                            <div class="context-box">
+                                <p>Death Valley 12AM on a Wednesday in March</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn-primary" href="http://hueyweather.com/" target="_blank" rel="noopener noreferrer">Try HUEY
+                    Live</a>
+                <a class="btn-secondary" href="/index.html">Close
+                    Project</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

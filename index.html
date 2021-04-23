@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
@@ -25,12 +27,12 @@
     </script>
     <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
-    <title>Jonny Abowd</title>
+    <title>Hello, Jonny!</title>
     <meta name="description" content="Digital designer, problem solver, and high five enthusiast." />
     <meta name="robots" content="index, follow">
 </head>
 
-<body>
+<body class="d-flex justify-content-center">
     <div class="profile">
         <div class="heroes">
             <h1 class="font-base pill">Hello, my name is <span class="name">Jonny Abowd.</span></h1>
@@ -39,27 +41,28 @@
         </div>
         <h2 class="font-display title fade-in">Digital designer, problem solver, and high five enthusiast
         </h2>
+        <!-- <div class="hr"></div> -->
         <div class="body fade-in">
             <p class="bio">
                 I am a dedicated creative that thrives on finding simple solutions to complex and demanding
-                challenges. Possessing over 10 years experience working in a variety of mediums with clientele both
-                large and small, I never miss a chance to learn. Cohorts have known me to be a reliable team player,
+                challenges. Possessing over 14 years experience working in a variety of mediums with clientele both
+                large and small, I never miss a chance to learn. Cohorts have known me to be a reliable team leader,
                 consistently delivering creative solutions with precision, flexibility, and a relentlessly positive
                 attitude.
                 <br><br>
-                Feel free to reach out and <a href="mailto:hello@jonnyabowd.com?subject=Hello Jonny!"
-                    class="contact-text-link">contact me</a> with any questions or inquires.
+                Feel free to reach out and <a href="#contact" class="contact-text-link">contact me</a> with any
+                questions or inquires.
             </p>
             <div class="contact">
                 <div class="links">
-                    <a href="mailto:hello@jonnyabowd.com?subject=Hello Jonny!">
+                    <a href="#contact">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M29.7526 0.20188L0.780705 16.911C-0.350666 17.5609 -0.2069 19.1356 0.91822 19.6105L7.56268 22.3974L25.5209 6.5756C25.8646 6.26941 26.3522 6.73807 26.0584 7.09425L11.0006 25.4343V30.4646C11.0006 31.9393 12.782 32.5204 13.6571 31.4519L17.6263 26.6216L25.4146 29.8834C26.3022 30.2583 27.3148 29.7022 27.4773 28.7461L31.9778 1.75157C32.1903 0.489322 30.8339 -0.422995 29.7526 0.20188Z"
                                 fill="#F18D2F" />
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/jonnyabowd/">
+                    <a href="https://www.linkedin.com/in/jonnyabowd/" target="_blank" rel="noopener noreferrer">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M0 2.29228C0 1.02663 1.0587 0 2.36474 0H29.6353C30.9412 0 32 1.02663 32 2.29228V29.7077C32 30.9738 30.9412 32 29.6353 32H2.36474C1.0587 32 0 30.9738 0 29.7077V2.29228ZM9.70009 26.7872V12.3374H4.86677V26.7872H9.70009ZM7.28341 10.3646C8.96888 10.3646 10.018 9.25497 10.018 7.86832C9.98654 6.45045 8.96889 5.37165 7.31538 5.37165C5.66205 5.37165 4.58105 6.45045 4.58105 7.86832C4.58105 9.25497 5.6299 10.3646 7.2519 10.3646H7.28331H7.28341ZM17.2083 26.7872H12.3751C12.3751 26.7872 12.4386 13.6933 12.3751 12.3374H17.2084V14.3832C17.1975 14.4 17.1867 14.4166 17.1761 14.433H17.2084V14.3832C17.8507 13.3986 19.0003 11.9984 21.5642 11.9984C24.7442 11.9984 27.1287 14.0636 27.1287 18.5019V26.7872H22.2958V19.0569C22.2958 17.1144 21.5961 15.7893 19.8472 15.7893C18.512 15.7893 17.7167 16.683 17.3673 17.5458C17.2397 17.8546 17.2083 18.286 17.2083 18.7178V26.7872Z"
@@ -71,6 +74,179 @@
                 <p class="font-display copyright">© Jonny Abowd 2021</p>
             </div>
         </div>
+        <div class="hr fade-in"></div>
+        <section class="work fade-in">
+            <h2 class="font-display text-center subtitle">Featured Projects</h2>
+            <div class="container-fluid">
+                <div class="row mt-2 mb-0">
+                    <a href="/projects/shoppingmobileapp.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-cart.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">Shopping Mobile App</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/hueyweather.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-cloud.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">HUEY <br>Weather</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/autoloantools.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-wheel.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">Auto Loan Tools</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/connectingflight.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-plane.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">Connecting Flight</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/skylanders3Dadventure.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-3d.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">Skylanders 3D Adventure</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/generatormakerspace.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-bolt.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">Generator Makerspace</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/monsterproject.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-monster.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">The Monster Project</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/visualdesign.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-logo.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">Visual Design & Branding</h3>
+                        </div>
+                    </a>
+                    <a href="/projects/laysstaxwebsite.html" class="col-12 col-sm-6 col-lg-4 project-preview">
+                        <div class="project-icon-container col-4">
+                            <img class="project-icon" src="/images/icon-stacks.svg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <h3 class="project-title">Lay’s Stax Website</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="hr fade-in"></div>
+        <section class="fade-in">
+            <h2 class="font-display text-center subtitle">Featured Clients</h2>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img class="px-0 px-xl-5" src="/images/client-logos/ja-client-av.svg" alt="Activision">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img src="images/client-logos/ja-client-att.svg" alt="AT&T">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img src="/images/client-logos/ja-client-cof.svg" alt="Capital One">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img src="/images/client-logos/ja-client-cheet.svg" alt="Cheetos">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img class="px-0 px-xl-5" src="images/client-logos/ja-client-dan.svg" alt="Dannon">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img src="/images/client-logos/ja-client-dor.svg" alt="Doritos">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img src="images/client-logos/ja-client-fl.svg" alt="Frito Lay">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img src="/images/client-logos/ja-client-sf.svg" alt="State Farm">
+                    </div>
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
+                        <img class="px-0 px-xl-3" src="/images/client-logos/ja-client-wm.svg" alt="Walmart">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="hr fade-in"></div>
+        <section class="fade-in">
+            <h2 class="font-display text-center mb-3 subtitle">Contact Jonny</h2>
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-12 col-md-6 mb-3 px-md-5">
+                        <p class="contact-info col-12 col-md-11">
+                            I believe in the power creativity has to solve any problem big or small. I also believe in
+                            the
+                            lifelong pursuit of everything
+                            fun
+                            and
+                            fulfilling. “Funfilling,” if you will.
+                        </p>
+                        <p class="contact-info col-md-11">
+                            Those who know me know that I value humor, authenticity, and empathy above
+                            all else.
+                        </p>
+                        <p class="contact-info col-md-11">
+                            If you share these values and feel I could be of service to you or your organization, I
+                            would
+                            love to hear from you. Please
+                            get in touch using my contact form or reach out to me on
+                            <a href="https://www.linkedin.com/in/jonnyabowd/" class="contact-text-link" target="_blank"
+                                rel="noopener noreferrer">LinkedIn</a>.
+                        </p>
+                        <p class="contact-info col-md-11">
+                            Thank you in advance,
+                        </p>
+                        <div class="col-12">
+                            <img class="col-4 col-md-6 col-lg-4 px-4" src="/images/ja-sig.svg" alt="Jonny">
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        var submitted = false;
+                    </script>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                        onload="if(submitted) {window.location='/projects/thankyou.html';}"></iframe>
+                    <form class="col-12 col-md-6" id="contact"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLScf3ShGME4sEZULNA0agURy5oIzRbovVPlR0Q6P1UQpXrw2iQ/formResponse"
+                        method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                        <div class="mb-3 p-2 d-flex form-container">
+                            <label class="col-3 form-label">Name</label>
+                            <input class="col-9" type="text" name="entry.1881999062" required>
+                        </div>
+                        <div class=" mb-3 p-2 d-flex form-container">
+                            <label class="col-3 form-label">Email</label>
+                            <input class="col-9" type="email" name="entry.518998491" required>
+                        </div>
+                        <div class="mb-3 p-2 d-flex align-content-start form-container">
+                            <label class="col-3 form-label">Message</label>
+                            <textarea class="col-9" name="entry.1638262852" required></textarea>
+                        </div>
+                        <button class="btn-custom" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
     <div class="built-by">
         Built with
@@ -81,6 +257,20 @@
         </svg>
         by Jonny Abowd
     </div>
+    <div class="flier">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M0 6.11146C4.65061 2.13936 10.2515 4.63496e-08 16 0C21.7485 -4.63487e-08 27.3494 2.13936 32 6.11146L16 32L0 6.11146Z"
+                fill="#F18D2F" />
+            <circle cx="11" cy="7" r="3" fill="#813E00" />
+            <circle cx="15" cy="20" r="3" fill="#813E00" />
+            <circle cx="21" cy="11" r="3" fill="#813E00" />
+        </svg>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
