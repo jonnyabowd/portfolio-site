@@ -115,6 +115,9 @@ a:hover {
     color: var(--primary);
 }
 
+.image-shadow {
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /* shoppingmobileapp styles */
 
@@ -283,10 +286,6 @@ a:hover {
 .monster-image-container {
     background-color: #f2f1f1;
     overflow: hidden;
-}
-
-.monster-image {
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1), 0px 16px 32px rgba(0, 0, 0, 0.1);
 }
 
 .monstats {
