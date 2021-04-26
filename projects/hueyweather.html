@@ -45,13 +45,14 @@
                             Merging a passion for weather forecasting, minimalist design, and trend analysis, I set out
                             to
                             create a web-based 168hr weather data visualization of temperature and chance of
-                            precipitation that is 100% non-alphanumeric. This would condense a large and complicated
-                            amount of data into a simplistic, high-level view that can be quickly interpreted at a
+                            precipitation that is 100% non-alphanumeric. The goal is to condense a large and complicated
+                            amount of forecast data into a simplistic, high-level view that can be quickly interpreted
+                            at a
                             glance.
                         </div>
                     </div>
-                    <div class="row mb-5">
-                        <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-4 mb-5">
                             <h2 class="modal-subhead">Technology Used</h2>
                             <div class="col-12">
                                 <ul>
@@ -76,7 +77,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-sm-8 mb-5">
                             <h2 class="modal-subhead">Solution</h2>
                             <div class="col-12">
                                 Using a simple color matrix charting temperature and chance of precipitation along the
@@ -87,19 +88,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row py-5 mb-5 d-flex justify-content-center huey-image-container">
-                        <div class="col-12 d-flex flex-column">
-                            <img class="col-8 col-md-4 align-self-center" src="/images/project-images/huey-modal.png">
-                        </div>
-                        <div class="col-8 col-md-6 text-center align-self-center context-box">
-                            <p>Simple and beautiful, with a wealth of data to be interpreted at a glance. HUEY enables
-                                you to see trends in the weather around you.</p>
-                        </div>
-                    </div>
                     <div class="row mb-5">
                         <h2 class="modal-subhead">High-Level Code Logic</h2>
                         <div class="col-12">
-                            <ul>
+                            <ol>
                                 <li>
                                     User enters location
                                 </li>
@@ -111,11 +103,13 @@
                                     hourly forecast for the next 168 hours (1 week)
                                 </li>
                                 <li>
-                                    Create a 7 x 24 space grid (168 total spaces) within a GUI representing the time (in
-                                    hours) and day
+                                    Create a 7 x 24 space grid (168 total spaces) within a GUI representing the time
+                                    (in
+                                    hours) and days
                                 </li>
                                 <li>
-                                    Starting with Sunday at 12am in the top left, use temperature and precipitation for
+                                    Starting with Sunday at 12am in the top left, use temperature and precipitation
+                                    for
                                     each hour to
                                     style the background color on each space of the grid
                                 </li>
@@ -123,36 +117,52 @@
                                     Indicate which hour in which day is the current hour
                                 </li>
                                 <li>
-                                    Set timer to rerun application at the top of each hour to update data as long as the
+                                    Set timer to rerun application at the top of each hour to update data as long as
+                                    the
                                     browser window is open
                                 </li>
-                            </ul>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row py-5 mb-5 d-flex justify-content-center align-items-center huey-image-container">
+                        <div class="col-10 col-md-4 order-1 order-md-2">
+                            <h2 class="mb-3 col-12 text-center text-md-start project-title white-text">Homepage Design
+                            </h2>
+                            <p class="col-12 text-center text-md-start mt-0 mb-3 white-text">
+                                A single location input and data toggle
+                                control
+                                are all that powers this experience.
+                            </p>
+                            <p class="col-12 text-center text-md-start mt-0 mb-3 white-text">
+                                Simple and beautiful, with a wealth of data to be interpreted at a glance. HUEY enables
+                                you to see trends in the weather around you.
+                            </p>
+                        </div>
+                        <div class="col-8 col-md-4 d-flex flex-column order-2 order-md-1">
+                            <img class="col-12 align-self-center" src="/images/project-images/huey-modal.png">
                         </div>
                     </div>
                     <div class="row py-5 mb-5 d-flex justify-content-center huey-image-container">
-                        <img class="col-8 col-md-4 order-1 order-md-1" src="/images/project-images/huey-forecast1.png">
-                        <img class="col-8 col-md-4 order-3 order-md-2" src="/images/project-images/huey-forecast2.png">
-                        <img class="col-8 col-md-4 order-5 order-md-3" src="/images/project-images/huey-forecast3.png">
-                        <div class="col-8 col-md-4 text-center align-self-center order-2 order-md-4">
-                            <div class="context-box">
-                                <p>Mt Everest 8pm on a Wednesday in March</p>
-                            </div>
+                        <h2 class="mb-3 col-12 text-center project-title white-text">Sample Weather Patterns
+                        </h2>
+                        <div class="col-8 col-md-4 text-center align-self-center order-1 order-md-1 white-text">
+                            <p class="mb-3">Mt. Everest 8pm on a Wednesday in March</p>
                         </div>
-                        <div class="col-8 col-md-4 text-center align-self-center order-4 order-md-5">
-                            <div class="context-box">
-                                <p>Austin, Texas 7pm on a Monday in March</p>
-                            </div>
+                        <div class="col-8 col-md-4 text-center align-self-center order-3 order-md-2 white-text">
+                            <p class="mb-3">Austin, Texas 7pm on a Monday in March</p>
                         </div>
-                        <div class="col-8 col-md-4 text-center align-self-center order-5 order-md-5">
-                            <div class="context-box">
-                                <p>Death Valley 12AM on a Wednesday in March</p>
-                            </div>
+                        <div class="col-8 col-md-4 text-center align-self-center order-5 order-md-3 white-text">
+                            <p class="mb-3">Death Valley 12am on a Wednesday in March</p>
                         </div>
+                        <img class="col-8 col-md-4 order-2 order-md-4" src="/images/project-images/huey-forecast1.png">
+                        <img class="col-8 col-md-4 order-4 order-md-5" src="/images/project-images/huey-forecast2.png">
+                        <img class="col-8 col-md-4 order-5 order-md-6" src="/images/project-images/huey-forecast3.png">
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <a class="btn-primary" href="http://hueyweather.com/" target="_blank" rel="noopener noreferrer">Try HUEY
+                <a class="btn-primary" href="https://hueyweather.com/" target="_blank" rel="noopener noreferrer">Try
+                    HUEY
                     Live</a>
                 <a class="btn-secondary" href="/index.html">Close
                     Project</a>
