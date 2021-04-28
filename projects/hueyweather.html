@@ -34,94 +34,110 @@
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title" id="exampleModalLabel">HUEY Weather</h1>
-                <a class="btn-close" href="/index.html"></a>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="col-12 col-lg-10 d-flex align-items-center header-content">
+                        <h1 class="modal-title" id="exampleModalLabel">HUEY Weather</h1>
+                        <a class="btn-close" href="/index.html"></a>
+                    </div>
+                </div>
             </div>
             <div class="modal-body w-100 d-flex justify-content-center">
                 <div class="container-fluid">
-                    <div class="row mt-2 mb-5">
-                        <h2 class="modal-subhead">Challenge</h2>
-                        <div class="col-12">
-                            Merging a passion for weather forecasting, minimalist design, and trend analysis, I set out
-                            to
-                            create a web-based 168hr weather data visualization of temperature and chance of
-                            precipitation that is 100% non-alphanumeric. The goal is to condense a large and complicated
-                            amount of forecast data into a simplistic, high-level view that can be quickly interpreted
-                            at a
-                            glance.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-4 mb-5">
-                            <h2 class="modal-subhead">Technology Used</h2>
-                            <div class="col-12">
-                                <ul>
-                                    <li>
-                                        HTML
-                                    </li>
-                                    <li>
-                                        CSS
-                                    </li>
-                                    <li>
-                                        Vanilla Javascript
-                                    </li>
-                                    <li>
-                                        Darksky API
-                                    </li>
-                                    <li>
-                                        Google Places API
-                                    </li>
-                                    <li>
-                                        Github
-                                    </li>
-                                </ul>
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="col-12 col-lg-8">
+                            <div class="row mt-5 mb-5">
+                                <h2 class="modal-subhead">Challenge</h2>
+                                <div class="col-12">
+                                    Merging a passion for weather forecasting, minimalist design, and trend analysis, I
+                                    set out
+                                    to
+                                    create a web-based 168hr weather data visualization of temperature and chance of
+                                    precipitation that is 100% non-alphanumeric. The goal is to condense a large and
+                                    complicated
+                                    amount of forecast data into a simplistic, high-level view that can be quickly
+                                    interpreted
+                                    at a
+                                    glance.
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-12 col-sm-8 mb-5">
-                            <h2 class="modal-subhead">Solution</h2>
-                            <div class="col-12">
-                                Using a simple color matrix charting temperature and chance of precipitation along the
-                                respective X and Y axes, create a week long cell grid divided by hour and plot the
-                                appropriate color values in the appropriate color cells and indicate which cell
-                                corresponds
-                                to the current time.
+                            <div class="row">
+                                <div class="col-12 col-sm-4 mb-5">
+                                    <h2 class="modal-subhead">Technology Used</h2>
+                                    <div class="col-12">
+                                        <ul>
+                                            <li>
+                                                HTML
+                                            </li>
+                                            <li>
+                                                CSS
+                                            </li>
+                                            <li>
+                                                Vanilla Javascript
+                                            </li>
+                                            <li>
+                                                Darksky API
+                                            </li>
+                                            <li>
+                                                Google Places API
+                                            </li>
+                                            <li>
+                                                Github
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-8 mb-5">
+                                    <h2 class="modal-subhead">Solution</h2>
+                                    <div class="col-12">
+                                        Using a simple color matrix charting temperature and chance of precipitation
+                                        along the
+                                        respective X and Y axes, create a week long cell grid divided by hour and plot
+                                        the
+                                        appropriate color values in the appropriate color cells and indicate which cell
+                                        corresponds
+                                        to the current time.
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row mb-5">
-                        <h2 class="modal-subhead">High-Level Code Logic</h2>
-                        <div class="col-12">
-                            <ol>
-                                <li>
-                                    User enters location
-                                </li>
-                                <li>
-                                    Use Google Places API to determine X,Y coordinates
-                                </li>
-                                <li>
-                                    Fetch data from DarkSky using X, Y coordinates and return extended
-                                    hourly forecast for the next 168 hours (1 week)
-                                </li>
-                                <li>
-                                    Create a 7 x 24 space grid (168 total spaces) within a GUI representing the time
-                                    (in
-                                    hours) and days
-                                </li>
-                                <li>
-                                    Starting with Sunday at 12am in the top left, use temperature and precipitation
-                                    for
-                                    each hour to
-                                    style the background color on each space of the grid
-                                </li>
-                                <li>
-                                    Indicate which hour in which day is the current hour
-                                </li>
-                                <li>
-                                    Set timer to rerun application at the top of each hour to update data as long as
-                                    the
-                                    browser window is open
-                                </li>
-                            </ol>
+                            <div class="row mb-5">
+                                <h2 class="modal-subhead">High-Level Code Logic</h2>
+                                <div class="col-12">
+                                    <ol>
+                                        <li>
+                                            User enters location
+                                        </li>
+                                        <li>
+                                            Use Google Places API to determine X,Y coordinates
+                                        </li>
+                                        <li>
+                                            Fetch data from DarkSky using X, Y coordinates and return extended
+                                            hourly forecast for the next 168 hours (1 week)
+                                        </li>
+                                        <li>
+                                            Create a 7 x 24 space grid (168 total spaces) within a GUI representing the
+                                            time
+                                            (in
+                                            hours) and days
+                                        </li>
+                                        <li>
+                                            Starting with Sunday at 12am in the top left, use temperature and
+                                            precipitation
+                                            for
+                                            each hour to
+                                            style the background color on each space of the grid
+                                        </li>
+                                        <li>
+                                            Indicate which hour in which day is the current hour
+                                        </li>
+                                        <li>
+                                            Set timer to rerun application at the top of each hour to update data as
+                                            long as
+                                            the
+                                            browser window is open
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row py-5 mb-5 d-flex justify-content-center align-items-center huey-image-container">
@@ -161,11 +177,15 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <a class="btn-primary" href="https://hueyweather.com/" target="_blank" rel="noopener noreferrer">Try
-                    HUEY
-                    Live</a>
-                <a class="btn-secondary" href="/index.html">Close
-                    Project</a>
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="d-flex align-items-center footer-content">
+                        <a class="btn-primary mx-3" href="https://hueyweather.com/" target="_blank"
+                            rel="noopener noreferrer">Try
+                            HUEY
+                            Live</a>
+                        <a class="btn-secondary" href="/index.html">Close Project</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
