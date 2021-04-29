@@ -21,7 +21,6 @@ body {
     color: var(--primary);
     font-family: var(--font-base-sans);
     box-sizing: border-box;
-    overflow: scroll;
     perspective: 1000px;
     perspective-origin: 50% 50%;
     -webkit-animation: animation 300s linear infinite;
@@ -508,8 +507,9 @@ textarea:focus {
         width: 100%;
         font-size: 12px;
         box-shadow: none;
-        padding: 16px 24px 16px 100px;
+        padding: 16px 24px 16px 80px;
         margin-right: 0px;
+        margin-left: 20px;
     }
 
     .profile-img {
