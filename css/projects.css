@@ -10,6 +10,9 @@
     --shadow-low: 0px 20px 0px rgba(0, 0, 0, 0.25);
     --shadow-high: 0px 60px 0px rgba(0, 0, 0, 0.25);
     ;
+
+    --border-round-lg: 32px;
+    --border-round-sm: 0;
 }
 
 html,
@@ -180,7 +183,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 /* huey styles */
@@ -192,7 +195,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 /* auto loan tools styles */
@@ -204,7 +207,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 .autoloantools-image-container-2 {
@@ -214,7 +217,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 /* connecting flight styles */
@@ -226,7 +229,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 .connectingflight-image-container-2 {
@@ -236,7 +239,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 /* skylanders styles */
@@ -248,7 +251,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 /* generator styles */
@@ -273,7 +276,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 .generator-image-container2 {
@@ -283,7 +286,7 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 .generator-image-container3 {
@@ -293,13 +296,13 @@ a:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
 }
 
 .generator-image-container4 {
     background-color: #f2f2f2;
     background-color: #ffffff;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
     overflow: hidden;
 }
 
@@ -343,6 +346,38 @@ a:hover {
 
 .visual-design-image-container {
     background-color: #f2f1f1;
-    border-radius: 32px;
+    border-radius: var(--border-round-lg);
     overflow: hidden;
+}
+
+/* Media Queries */
+
+/* tablet styles */
+@media (max-width: 768px) {
+    .modal-title {
+        font-size: 32px;
+    }
+
+    .shoppingmobileapp-image-container {
+        border-radius: var(--border-round-sm);
+    }
+
+    .shoppingmobileapp-image-container,
+    .huey-image-container,
+    .autoloantools-image-container-1,
+    .autoloantools-image-container-2,
+    .connectingflight-image-container-1,
+    .connectingflight-image-container-2,
+    .skylanders-image-container,
+    .generator-image-container1,
+    .generator-image-container2,
+    .generator-image-container3,
+    .generator-image-container4,
+    .visual-design-image-container {
+        border-radius: var(--border-round-sm);
+    }
+
+    .round-corners {
+        border-radius: 12px;
+    }
 }

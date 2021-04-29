@@ -467,14 +467,11 @@ textarea:focus {
 
     .profile-img {
         width: 120px;
+        margin-top: -10px;
     }
 
     h2.title {
         font-size: 56px;
-    }
-
-    .smile {
-        font-size: 48px;
     }
 
     p.bio {
@@ -497,13 +494,14 @@ textarea:focus {
     }
 
     .profile {
-        padding: 100px 32px 32px;
+        padding: 0px 24px 32px;
+        border: 6px solid var(--accent);
         box-shadow: var(--shadow-low);
-        margin: 30px 30px 100px;
+        margin: 70px 16px 100px;
     }
 
     .heroes {
-        margin-top: -124px;
+        margin-top: -30px;
     }
 
     .pill {
@@ -515,7 +513,9 @@ textarea:focus {
     }
 
     .profile-img {
-        width: 80px;
+        width: 90px;
+        margin-top: -15px;
+        border: 6px solid var(--accent);
         position: absolute;
     }
 
@@ -529,10 +529,6 @@ textarea:focus {
         font-size: 32px;
         text-align: center;
         margin: 20px 0 0;
-    }
-
-    .smile {
-        font-size: 28px;
     }
 
     .body {
@@ -574,5 +570,10 @@ textarea:focus {
 
     .client-logo {
         height: 90px;
+    }
+
+    .row>* {
+        padding-right: 0;
+        padding-left: 0;
     }
 }
