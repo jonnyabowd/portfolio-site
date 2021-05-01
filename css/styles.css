@@ -507,9 +507,11 @@ textarea:focus {
         width: 100%;
         font-size: 12px;
         box-shadow: none;
-        padding: 16px 24px 16px 80px;
+        padding: 12px 48px 12px 84px;
         margin-right: 0px;
         margin-left: 20px;
+        line-height: 150%;
+        ;
     }
 
     .profile-img {
@@ -575,5 +577,28 @@ textarea:focus {
     .row>* {
         padding-right: 0;
         padding-left: 0;
+    }
+
+    /* project preview styles */
+
+    .project-preview {
+        min-height: 80px;
+        padding: 0px 40px;
+    }
+
+    .project-icon-container {
+        width: 54px;
+        height: 54px;
+        margin: 0 8px;
+    }
+
+    .project-icon {
+        width: 28px;
+    }
+
+    .project-title {
+        font-size: 24px;
+        line-height: 100%;
+        max-width: 120px;
     }
 }
