@@ -50,15 +50,9 @@
                                 <h2 class="modal-subhead">Challenge</h2>
                                 <div class="col-12">
                                     Merging a passion for weather forecasting, minimalist design, and trend analysis, I
-                                    set out
-                                    to
-                                    create a web-based 168hr weather data visualization of temperature and chance of
-                                    precipitation that is 100% non-alphanumeric. The goal is to condense a large and
-                                    complicated
-                                    amount of forecast data into a simplistic, high-level view that can be quickly
-                                    interpreted
-                                    at a
-                                    glance.
+                                    set out to create a weekly weather data visualization that is 100% non-alphanumeric.
+                                    The goal would be to condense a large and complicated amount of data into a
+                                    simplistic, high-level view that can be quickly interpreted at a glance.
                                 </div>
                             </div>
                             <div class="row">
@@ -67,13 +61,10 @@
                                     <div class="col-12">
                                         <ul>
                                             <li>
-                                                HTML
+                                                HTML & CSS
                                             </li>
                                             <li>
-                                                CSS
-                                            </li>
-                                            <li>
-                                                Vanilla Javascript
+                                                Javascript
                                             </li>
                                             <li>
                                                 Darksky API
@@ -93,13 +84,17 @@
                                 <div class="col-12 col-sm-8 mb-5">
                                     <h2 class="modal-subhead">Solution</h2>
                                     <div class="col-12">
-                                        Using a simple color matrix charting temperature and chance of precipitation
-                                        along the
-                                        respective X and Y axes, create a week long cell grid divided by hour and plot
-                                        the
-                                        appropriate color values in the appropriate color cells and indicate which cell
-                                        corresponds
-                                        to the current time.
+                                        <p>
+                                            I designed a forecast resembling a weekly calendar with 7 days and 24 hours
+                                            in each day. Each hour uses a single RGB background color to communicate
+                                            both temperature and chance of precipitation.
+                                        </p>
+                                        <p>
+                                            More reddish means a higher temperature while more blue indicates a cooler
+                                            one. The more green a color is, the higher the chance of precipitation. You
+                                            can identify the current hour on the grid by the fading animation from black
+                                            to white.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -124,14 +119,15 @@
                                             hours) and days
                                         </li>
                                         <li>
-                                            Starting with Sunday at 12am in the top left, use temperature and
-                                            precipitation
-                                            for
-                                            each hour to
-                                            style the background color on each space of the grid
+                                            Style the RGB background color on each space of the grid using a higher R
+                                            (red) or B (blue) for temperature and G (green) for precipitation
                                         </li>
                                         <li>
-                                            Indicate which hour in which day is the current hour
+                                            Capture the current weekday and time then cycle the grid until the current
+                                            hour is in the appropriate spot on the grid, simulating a calendar view
+                                        </li>
+                                        <li>
+                                            Give the current hour an animation
                                         </li>
                                         <li>
                                             Set timer to rerun application at the top of each hour to update data as

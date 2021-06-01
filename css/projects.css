@@ -381,3 +381,12 @@ a:hover {
         border-radius: 12px;
     }
 }
+
+/* phone styles */
+@media (max-width: 576px) {
+
+    .project-title {
+        font-size: 32px;
+    }
+
+}
