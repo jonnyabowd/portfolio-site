@@ -513,11 +513,9 @@ textarea:focus {
 
     .profile {
         padding: 0px 24px 32px;
-        border: 0;
-        border-top: 6px solid var(--accent);
-        border-bottom: 6px solid var(--accent);
+        border: 6px solid var(--accent);
         box-shadow: var(--shadow-low);
-        margin: 70px 0 100px;
+        margin: 70px 16px 100px;
     }
 
     .heroes {
