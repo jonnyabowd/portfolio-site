@@ -186,6 +186,11 @@ textarea:focus {
     margin: 0px;
 }
 
+.form-input {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
 .btn-custom,
 .btn-custom:focus {
     background-color: var(--primary);
@@ -231,6 +236,12 @@ textarea:focus {
 
 .copyright {
     margin: 0;
+}
+
+@element '.copyright' {
+    $this:before {
+        content: '© eval("new Date().getFullYear()")\ '
+    }
 }
 
 .built-by {
@@ -323,11 +334,16 @@ textarea:focus {
 
 /* client styles */
 
-.client-logo {
+.client-logo-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 140px;
+    height: 160px;
+}
+
+.client-logo {
+
+    max-height: 100px;
 }
 
 /* animations */

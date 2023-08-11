@@ -92,7 +92,9 @@ Fancy seeing you here! If you have any feedback on my code or suggestions on how
 
                     </a>
                 </div>
-                <p class="font-display copyright">© Jonny Abowd 2023</p>
+                <p class="font-display copyright">© Jonny Abowd 
+                    <script>document.write( new Date().getFullYear() );</script>
+                </p>
             </div>
         </div>
         <div class="hr fade-in"></div>
@@ -180,32 +182,32 @@ Fancy seeing you here! If you have any feedback on my code or suggestions on how
             <h2 class="font-display text-center subtitle">Featured Clients</h2>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img class="px-0 px-xl-5" src="/images/client-logos/ja-client-av.svg" alt="Activision">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="px-0 px-xl-5 client-logo" src="/images/client-logos/ja-client-av.svg" alt="Activision">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img src="images/client-logos/ja-client-att.svg" alt="AT&T">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="client-logo" src="images/client-logos/ja-client-att.svg" alt="AT&T">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img src="/images/client-logos/ja-client-cof.svg" alt="Capital One">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="client-logo" src="/images/client-logos/ja-client-cof.svg" alt="Capital One">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img src="/images/client-logos/ja-client-cheet.svg" alt="Cheetos">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="client-logo" src="/images/client-logos/ja-client-cheet.svg" alt="Cheetos">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img class="px-0 px-xl-5" src="images/client-logos/ja-client-dan.svg" alt="Dannon">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="px-0 px-xl-5 client-logo" src="images/client-logos/ja-client-dan.svg" alt="Dannon">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img src="/images/client-logos/ja-client-dor.svg" alt="Doritos">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="client-logo" src="/images/client-logos/ja-client-dor.svg" alt="Doritos">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img src="images/client-logos/ja-client-fl.svg" alt="Frito Lay">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="client-logo" src="images/client-logos/ja-client-fl.svg" alt="Frito Lay">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img src="/images/client-logos/ja-client-sf.svg" alt="State Farm">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="client-logo" src="/images/client-logos/ja-client-sf.svg" alt="State Farm">
                     </div>
-                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo">
-                        <img class="px-0 px-xl-3" src="/images/client-logos/ja-client-wm.svg" alt="Walmart">
+                    <div class="col-6 col-md-4 p-3 p-md-5 client-logo-container">
+                        <img class="px-0 px-xl-3 client-logo" src="/images/client-logos/ja-client-wm.svg" alt="Walmart">
                     </div>
                 </div>
             </div>
@@ -250,15 +252,15 @@ Fancy seeing you here! If you have any feedback on my code or suggestions on how
                         method="post" target="hidden_iframe" onsubmit="submitted=true;">
                         <div class="mb-3 p-2 d-flex form-container">
                             <label class="col-3 form-label">Name</label>
-                            <input class="col-9" type="text" name="entry.1881999062" required>
+                            <input class="col-9 form-input" type="text" name="entry.1881999062" required>
                         </div>
                         <div class=" mb-3 p-2 d-flex form-container">
                             <label class="col-3 form-label">Email</label>
-                            <input class="col-9" type="email" name="entry.518998491" required>
+                            <input class="col-9 form-input" type="email" name="entry.518998491" required>
                         </div>
                         <div class="mb-3 p-2 d-flex align-content-start form-container">
                             <label class="col-3 form-label">Message</label>
-                            <textarea class="col-9" name="entry.1638262852" required></textarea>
+                            <textarea class="col-9 form-input" name="entry.1638262852" required></textarea>
                         </div>
                         <button class="btn-custom" type="submit">Send Message</button>
                     </form>
