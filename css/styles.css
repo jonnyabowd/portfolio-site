@@ -170,7 +170,6 @@ textarea {
 input:focus,
 textarea:focus {
     border: 2px solid var(--secondary);
-    /* border-color: var(--secondary); */
     outline: 4px;
 }
 
@@ -188,8 +187,9 @@ textarea:focus {
 }
 
 .form-input {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--accent);
+    border: 2px solid var(--accent);
+    color: var(--primary);
 }
 
 .btn-custom,
