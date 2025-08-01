@@ -88,8 +88,10 @@ body {
 }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: -120px;
+    margin-right: 40px;
     border-radius: 50%;
     border: 8px solid var(--accent);
     box-shadow: var(--shadow-low);
@@ -470,6 +472,16 @@ textarea:focus {
 
 
 /* Media Queries */
+
+/* tablet styles */
+@media (max-width: 1100px) {
+    .profile-img {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+}
 
 /* tablet styles */
 @media (max-width: 768px) {
