@@ -174,6 +174,40 @@ a:hover {
     margin-bottom: 16px;
 }
 
+/* checkouttemplates styles */
+
+.payments-image-container {
+    background-color: #000000;
+    background: url(/images/project-images/payments-background.svg) repeat;
+    background-position: 0 0;
+    background-size: auto;
+    border-radius: var(--border-round-lg);
+    box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.15) inset;
+}
+
+.carousel {
+    --duration: 10s;   /* total cycle time */
+    --slides: 4;       /* number of images */
+}
+
+.carousel img {
+    position: absolute;
+    opacity: 0;
+    animation: show var(--duration) infinite;
+}
+
+.carousel img:nth-child(1) { animation-delay: calc(0 * var(--duration) / var(--slides)); }
+.carousel img:nth-child(2) { animation-delay: calc(1 * var(--duration) / var(--slides)); }
+.carousel img:nth-child(3) { animation-delay: calc(2 * var(--duration) / var(--slides)); }
+.carousel img:nth-child(4) { animation-delay: calc(3 * var(--duration) / var(--slides)); }
+
+@keyframes show {
+    0%   { opacity: 1; }
+    24.999% { opacity: 1; }
+    25%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
 /* shoppingmobileapp styles */
 
 .shoppingmobileapp-image-container {
