@@ -25,6 +25,11 @@ body {
     perspective-origin: 50% 50%;
     -webkit-animation: animation 300s linear infinite;
     animation: animation 300s linear infinite;
+    cursor: url('../images/ja-cursor.png') 4 4, auto;
+}
+
+a:hover {
+    cursor: url('../images/ja-cursor-hover.png') 4 4, pointer;
 }
 
 @keyframes animation {
