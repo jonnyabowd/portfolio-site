@@ -1,16 +1,4 @@
 :root {
-    --primary: hsl(29, 87%, 56%);
-    --secondary: hsl(29, 100%, 11%);
-    --accent: hsl(29, 100%, 25%);
-    --grey-med: hsl(222, 10%, 74%);
-    --grey-lt: hsl(222, 10%, 84%);
-    --font-base: 'Merriweather', serif;
-    --font-base-sans: 'Merriweather Sans', sans-serif;
-    --font-display: 'Bebas Neue', serif;
-    --shadow-low: 0px 20px 0px rgba(0, 0, 0, 0.25);
-    --shadow-high: 0px 60px 0px rgba(0, 0, 0, 0.25);
-    ;
-
     --border-round-lg: 32px;
     --border-round-sm: 0;
 }
@@ -99,7 +87,6 @@ ol>li::before {
 }
 
 img {
-    image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
 }
 
@@ -166,6 +153,15 @@ a:hover {
     color: #ffffff;
 }
 
+.project-image-container {
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    border-radius: var(--border-round-lg);
+}
+
 .context-box {
     background: #000000;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25), 0px 16px 32px rgba(0, 0, 0, 0.25), 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -177,11 +173,10 @@ a:hover {
 /* checkouttemplates styles */
 
 .payments-image-container {
-    background-color: #000000;
-    background: url(/images/project-images/payments-background.svg) repeat;
-    background-position: 0 0;
+    background-image: url(/images/project-images/payments-background.svg);
+    background-repeat: repeat;
+    background-attachment: scroll;
     background-size: auto;
-    border-radius: var(--border-round-lg);
     box-shadow: 0 4px 100px 0 rgba(0, 0, 0, 0.15) inset;
 }
 
@@ -212,80 +207,39 @@ a:hover {
 
 .shoppingmobileapp-image-container {
     background-color: #F7F2E3;
-    background: url(/images/project-images/shopping-background.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: var(--border-round-lg);
+    background-image: url(/images/project-images/shopping-background.svg);
 }
 
 /* huey styles */
 
 .huey-image-container {
-    background-color: #000000;
-    background: url(/images/project-images/huey-background.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: var(--border-round-lg);
+    background-image: url(/images/project-images/huey-background.svg);
 }
 
 /* auto loan tools styles */
 
 .autoloantools-image-container-1 {
-    background-color: #000000;
-    background: url(/images/project-images/autoloantools-background1.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: var(--border-round-lg);
+    background-image: url(/images/project-images/autoloantools-background1.svg);
 }
 
 .autoloantools-image-container-2 {
-    background-color: #000000;
-    background: url(/images/project-images/autoloantools-background2.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: var(--border-round-lg);
+    background-image: url(/images/project-images/autoloantools-background2.svg);
 }
 
 /* connecting flight styles */
 
 .connectingflight-image-container-1 {
-    background-color: #000000;
-    background: url(/images/project-images/connectingflight-background1.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: var(--border-round-lg);
+    background-image: url(/images/project-images/connectingflight-background1.svg);
 }
 
 .connectingflight-image-container-2 {
-    background-color: #000000;
-    background: url(/images/project-images/connectingflight-background2.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: var(--border-round-lg);
+    background-image: url(/images/project-images/connectingflight-background2.svg);
 }
 
 /* skylanders styles */
 
 .skylanders-image-container {
-    background-color: #000000;
-    background: url(/images/project-images/skylanders3Dadventure-background.svg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-radius: var(--border-round-lg);
+    background-image: url(/images/project-images/skylanders3Dadventure-background.svg);
 }
 
 /* generator styles */
