@@ -68,6 +68,14 @@
 
     var HOVER_SELECTOR = 'a, button, [role="button"], input, textarea, select, label, .btn';
 
+    function setHover(target) {
+        var nowHovering = !!(target && target.closest && target.closest(HOVER_SELECTOR));
+        if (nowHovering !== hovering) {
+            hovering = nowHovering;
+            cursor.classList.toggle('is-hover', hovering);
+        }
+    }
+
     document.addEventListener('mousemove', function (e) {
         x = e.clientX;
         y = e.clientY;
@@ -75,13 +83,19 @@
             visible = true;
             cursor.classList.add('is-visible');
         }
-        var nowHovering = !!(e.target.closest && e.target.closest(HOVER_SELECTOR));
-        if (nowHovering !== hovering) {
-            hovering = nowHovering;
-            cursor.classList.toggle('is-hover', hovering);
-        }
+        setHover(e.target);
         render();
     });
+
+    // The pointer stays still while the page scrolls under it, so no mousemove
+    // fires — the hover state would otherwise go stale (e.g. stuck in the hover
+    // image over a non-link area after scrolling away from a link). Re-check what
+    // is actually under the last-known pointer position on scroll.
+    window.addEventListener('scroll', function () {
+        if (!visible) return;
+        setHover(document.elementFromPoint(x, y));
+        render();
+    }, { passive: true });
 
     document.addEventListener('mouseleave', function () {
         visible = false;
