@@ -21,18 +21,25 @@
         '@media (hover: hover) and (pointer: fine) {' +
         '  html, body, a, button, [role="button"], input, textarea, select, label { cursor: none !important; }' +
         '}' +
+        // Outer element handles POSITION only — no transition, so it tracks the
+        // pointer instantly (a transition here makes it lag/misalign while moving).
         '.ja-cursor {' +
         '  position: fixed; top: 0; left: 0;' +
         '  width: ' + SIZE + 'px; height: ' + SIZE + 'px;' +
-        '  background-repeat: no-repeat; background-size: contain;' +
-        '  background-image: url("' + DEFAULT_SVG + '");' +
         '  pointer-events: none; z-index: 2147483647;' +
         '  opacity: 0;' +
-        '  transition: opacity 0.15s ease, transform 0.08s ease-out;' +
+        '  transition: opacity 0.15s ease;' +
         '  will-change: transform;' +
         '}' +
         '.ja-cursor.is-visible { opacity: 1; }' +
-        '.ja-cursor.is-hover {' +
+        // Inner element handles the look + hover SCALE, which can safely animate.
+        '.ja-cursor__img {' +
+        '  width: 100%; height: 100%;' +
+        '  background-repeat: no-repeat; background-size: contain;' +
+        '  background-image: url("' + DEFAULT_SVG + '");' +
+        '  transition: transform 0.08s ease-out;' +
+        '}' +
+        '.ja-cursor.is-hover .ja-cursor__img {' +
         '  background-image: url("' + HOVER_SVG + '");' +
         '  transform: scale(1.15);' +
         '}';
@@ -41,15 +48,18 @@
     var cursor = document.createElement('div');
     cursor.className = 'ja-cursor';
     cursor.setAttribute('aria-hidden', 'true');
+    var inner = document.createElement('div');
+    inner.className = 'ja-cursor__img';
+    cursor.appendChild(inner);
     document.body.appendChild(cursor);
 
     var x = 0, y = 0, hovering = false, visible = false;
 
     function render() {
-        // translate first (positions the element), then scale for the hover state.
-        var scale = hovering ? ' scale(1.15)' : '';
+        // Position only — instant, no easing. The hover scale lives on the inner
+        // element via CSS, so it can transition without affecting tracking.
         cursor.style.transform =
-            'translate(' + (x - HOTSPOT_X) + 'px, ' + (y - HOTSPOT_Y) + 'px)' + scale;
+            'translate(' + (x - HOTSPOT_X) + 'px, ' + (y - HOTSPOT_Y) + 'px)';
     }
 
     var HOVER_SELECTOR = 'a, button, [role="button"], input, textarea, select, label, .btn';
