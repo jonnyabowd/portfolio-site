@@ -9,7 +9,6 @@
     --font-display: 'Bebas Neue', serif;
     --shadow-low: 0px 20px 0px rgba(0, 0, 0, 0.25);
     --shadow-high: 0px 60px 0px rgba(0, 0, 0, 0.25);
-    ;
 }
 
 html,
@@ -244,12 +243,6 @@ textarea:focus {
 
 .copyright {
     margin: 0;
-}
-
-@element '.copyright' {
-    $this:before {
-        content: '© eval("new Date().getFullYear()")\ '
-    }
 }
 
 .built-by {
@@ -547,7 +540,6 @@ textarea:focus {
         margin-right: 0px;
         margin-left: 20px;
         line-height: 150%;
-        ;
     }
 
     .profile-img {
