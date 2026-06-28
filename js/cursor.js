@@ -9,10 +9,14 @@
 
     var DEFAULT_SVG = '/images/ja-cursor.svg';
     var HOVER_SVG = '/images/ja-cursor-hover.svg';
-    // Hotspot kept consistent with the old PNG cursor (4, 4 from top-left).
-    var HOTSPOT_X = 4;
-    var HOTSPOT_Y = 4;
     var SIZE = 46; // matches the SVG viewBox
+    // Anchor at the CENTER of the box. The default and hover SVGs differ in size
+    // (their visible artwork sits near center, ~25/25), so anchoring at a corner
+    // made the icon shift relative to the pointer when swapping to the larger
+    // hover art + scale. Centering keeps both states (and the hover scale)
+    // symmetric around the pointer, so there's no positional jump.
+    var HOTSPOT_X = SIZE / 2;
+    var HOTSPOT_Y = SIZE / 2;
 
     // Hide the native cursor + define the custom element via an injected stylesheet,
     // so this works on every page without editing each CSS file.
