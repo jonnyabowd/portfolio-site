@@ -135,6 +135,7 @@ img {
 
 .btn-secondary {
     background-color: var(--secondary);
+    color: var(--primary);
     border: 2px solid var(--secondary);
     border-radius: 36px;
     padding: 8px 32px;
