@@ -55,14 +55,23 @@ h1 {
 .btn-close {
     color: var(--primary);
     opacity: 100%;
-    /* push to the right edge of the header content, away from the title */
-    margin-left: auto;
     flex-shrink: 0;
     /* larger tap target (44x44) with the X icon kept at a modest size */
     width: 44px;
     height: 44px;
     padding: 0;
     background-size: 16px;
+}
+
+/*
+ * Push the X to the right edge of the header content.
+ * Needs the .modal-header descendant selector to out-specify Bootstrap's
+ * `.modal-header .btn-close` rule, whose `margin` shorthand resets margin-left
+ * to 0 (it references undefined --bs-modal-* vars, since there's no .modal
+ * ancestor). A bare `.btn-close { margin-left: auto }` loses that cascade.
+ */
+.modal-header .btn-close {
+    margin-left: auto;
 }
 
 h2 {
