@@ -9,7 +9,7 @@
 
     var DEFAULT_SVG = '/images/ja-cursor.svg';
     var HOVER_SVG = '/images/ja-cursor-hover.svg';
-    var SIZE = 46; // matches the SVG viewBox
+    var SIZE = 32; // matches the SVG viewBox (32x32)
     // Anchor at the CENTER of the box. The default and hover SVGs differ in size
     // (their visible artwork sits near center, ~25/25), so anchoring at a corner
     // made the icon shift relative to the pointer when swapping to the larger
