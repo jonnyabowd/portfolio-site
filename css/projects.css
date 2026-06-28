@@ -55,6 +55,14 @@ h1 {
 .btn-close {
     color: var(--primary);
     opacity: 100%;
+    /* push to the right edge of the header content, away from the title */
+    margin-left: auto;
+    flex-shrink: 0;
+    /* larger tap target (44x44) with the X icon kept at a modest size */
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-size: 16px;
 }
 
 h2 {
