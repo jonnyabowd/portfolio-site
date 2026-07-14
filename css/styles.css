@@ -24,6 +24,13 @@ body {
     animation: animation 300s linear infinite;
 }
 
+/* Anchor the absolutely-positioned .built-by badge to the bottom-right of
+   the page. Without a positioned ancestor it falls back to the viewport and
+   floats over page content (most visibly on mobile). */
+body {
+    position: relative;
+}
+
 @keyframes animation {
     100% {
         background-position: -2000px -3000px;
