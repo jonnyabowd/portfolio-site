@@ -115,8 +115,10 @@ ol>li::before {
 }
 
 img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    /* Smooth interpolation when images are scaled. 'crisp-edges' forced a
+       hard, pixelated upscale (meant for pixel art) which made screenshots
+       with fine text and thin lines look blocky on high-DPI displays. */
+    image-rendering: auto;
 }
 
 .btn-primary {
