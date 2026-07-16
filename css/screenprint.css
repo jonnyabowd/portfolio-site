@@ -87,9 +87,8 @@ body.sp::after {
     background: var(--paper);
     padding: 2px 6px;
 }
-.sp-frame::before { top: -8px; left: 50%; transform: translateX(-50%); }
+.sp-frame::before { top: -8px; left: 24px; }
 .sp-frame::after  { bottom: -8px; right: 24px; content: "OVERPRINT ✳ №01"; }
-@media (max-width: 680px) { .sp-frame::before { content: "✳"; } }
 
 /* =====================================================================
    Custom cursor — a printer's crosshair / registration target
@@ -150,20 +149,44 @@ a { color: inherit; }
     top: 0;
     z-index: 500;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    min-height: 30px;
     padding: 14px 40px;
     background: color-mix(in srgb, var(--paper) 82%, transparent);
     backdrop-filter: blur(4px);
     border-bottom: var(--edge);
 }
+/* Centered like a marquee sign, independent of the right-aligned links */
 .sp-nav .brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-family: var(--font-heavy);
     font-size: 18px;
     letter-spacing: -0.5px;
     text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--ink-orange);
+    /* neon glow — the "sign" is lit by default */
+    text-shadow:
+        0 0 4px color-mix(in srgb, var(--ink-orange) 70%, transparent),
+        0 0 12px color-mix(in srgb, var(--ink-orange) 55%, transparent),
+        0 0 22px color-mix(in srgb, var(--ink-orange) 35%, transparent);
+    transition: opacity .06s steps(1), text-shadow .06s steps(1), color .06s steps(1);
 }
-.sp-nav .brand b { color: var(--ink-orange); }
+.sp-nav .brand b { color: var(--ink-teal); }
+/* Flicker states toggled by JS at random intervals, like a failing neon tube */
+.sp-nav .brand.flicker-off {
+    opacity: 0.28;
+    color: color-mix(in srgb, var(--ink-orange) 45%, var(--brown));
+    text-shadow: none;
+}
+.sp-nav .brand.flicker-dim {
+    opacity: 0.6;
+    text-shadow: 0 0 3px color-mix(in srgb, var(--ink-orange) 40%, transparent);
+}
 .sp-nav .links {
     display: flex;
     gap: 26px;
@@ -171,6 +194,10 @@ a { color: inherit; }
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+@media (prefers-reduced-motion: reduce) {
+    .sp-nav .brand.flicker-off,
+    .sp-nav .brand.flicker-dim { opacity: 1; color: var(--ink-orange); }
 }
 .sp-nav .links a {
     text-decoration: none;
@@ -340,7 +367,7 @@ a { color: inherit; }
 .doodle.d-arrow  { width: 150px; top: 46%; left: 30%; color: var(--ink-teal-deep); animation: floaty 7s ease-in-out infinite; }
 .doodle.d-star   { width: 60px;  top: 8%;  right: 40%; color: var(--ink-orange); animation: spin 14s linear infinite; }
 .doodle.d-spark  { width: 40px;  bottom: 14%; left: 6%; color: var(--ink-orange); animation: floaty 5s ease-in-out infinite reverse; }
-.doodle.d-eye    { width: 80px;  bottom: 22%; right: 8%; color: var(--brown); animation: floaty 8s ease-in-out infinite; }
+.doodle.d-eye    { width: 80px;  bottom: 22%; right: 8%; color: var(--ink-teal-deep); animation: floaty 8s ease-in-out infinite; }
 
 @keyframes floaty {
     0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -534,7 +561,16 @@ a { color: inherit; }
     transition: transform .4s cubic-bezier(.16,.84,.44,1), background .3s ease;
 }
 .work-card:hover .work-ico { transform: rotate(-12deg) scale(1.06); background: var(--ink-teal); }
-.work-ico img { width: 30px; height: 30px; }
+/* Icons are recolored to the exact brand orange via mask (their source SVGs
+   bake in the old site orange, so we ignore their fill and paint the shape). */
+.work-ico .ico {
+    width: 30px; height: 30px;
+    background-color: var(--ink-orange);
+    -webkit-mask: var(--src) center / contain no-repeat;
+    mask: var(--src) center / contain no-repeat;
+    transition: background-color .3s ease;
+}
+.work-card:hover .ico { background-color: var(--brown); }
 .work-title {
     font-family: var(--font-funk);
     font-weight: 700;
@@ -579,20 +615,20 @@ a { color: inherit; }
     transition: background .3s ease;
 }
 .client-grid .client-cell:nth-child(6n) { border-right: none; }
-.client-cell img {
-    max-height: 46px;
-    max-width: 100%;
-    /* Print every logo as a single dark-brown ink impression */
-    filter: brightness(0) saturate(100%) invert(9%) sepia(38%) saturate(1400%) hue-rotate(348deg) brightness(92%) contrast(96%);
-    opacity: 0.85;
-    transition: filter .3s ease, transform .3s ease, opacity .3s ease;
+/* Each logo printed as a single turquoise ink impression (mask = exact color),
+   shifting to the neon orange with a tiny mis-registration nudge on hover. */
+.client-cell .logo {
+    width: 100%;
+    height: 48px;
+    background-color: var(--ink-teal-deep);
+    -webkit-mask: var(--src) center / contain no-repeat;
+    mask: var(--src) center / contain no-repeat;
+    transition: background-color .3s ease, transform .3s ease;
 }
-.client-cell:hover { background: var(--ink-teal); }
-.client-cell:hover img {
-    /* shift to orange ink + tiny mis-registration nudge on hover */
-    filter: brightness(0) saturate(100%) invert(48%) sepia(88%) saturate(2400%) hue-rotate(347deg) brightness(101%) contrast(104%);
+.client-cell:hover { background: var(--brown); }
+.client-cell:hover .logo {
+    background-color: var(--ink-orange);
     transform: translate(-2px, -2px);
-    opacity: 1;
 }
 @media (max-width: 800px) {
     .client-grid { grid-template-columns: repeat(3, 1fr); }
@@ -615,7 +651,15 @@ a { color: inherit; }
     align-items: start;
 }
 .contact-copy p { font-size: 16px; line-height: 1.7; margin: 0 0 18px; }
-.contact-copy .sig { max-width: 200px; margin-top: 10px; filter: brightness(0) saturate(100%) invert(48%) sepia(88%) saturate(2400%) hue-rotate(347deg) brightness(101%) contrast(104%); }
+.contact-copy .sig {
+    display: block;
+    width: 190px;
+    aspect-ratio: 106 / 78;
+    margin-top: 10px;
+    background-color: var(--ink-orange);
+    -webkit-mask: var(--src) left center / contain no-repeat;
+    mask: var(--src) left center / contain no-repeat;
+}
 
 .sp-form { display: flex; flex-direction: column; gap: 16px; }
 .field { position: relative; }
