@@ -147,14 +147,16 @@ a { color: inherit; }
 .sp-nav {
     position: sticky;
     top: 0;
-    z-index: 500;
+    /* Sit above the decorative page frame (z 9997) + grain (9998) so the solid
+       bar cleanly caps the top: the frame's top border and its corner label
+       tuck behind this bar instead of cutting through the centered wordmark. */
+    z-index: 9999;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    min-height: 30px;
-    padding: 14px 40px;
-    background: color-mix(in srgb, var(--paper) 82%, transparent);
-    backdrop-filter: blur(4px);
+    min-height: 46px;
+    padding: 12px 40px;
+    background: var(--paper);
     border-bottom: var(--edge);
 }
 /* Centered like a marquee sign, independent of the right-aligned links */
