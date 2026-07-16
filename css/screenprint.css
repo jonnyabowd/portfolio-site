@@ -644,7 +644,7 @@ a { color: inherit; }
 .contact-copy p { font-size: 16px; line-height: 1.7; margin: 0 0 18px; }
 .contact-copy .sig {
     display: block;
-    width: 190px;
+    width: 95px;
     aspect-ratio: 106 / 78;
     margin-top: 10px;
     background-color: var(--ink-orange);
