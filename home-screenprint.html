@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    __  __                  __      __
+   / / / /___ _      ______/ /_  __/ /
+  / /_/ / __ \ | /| / / __  / / / / /
+ / __  / /_/ / |/ |/ / /_/ / /_/ /_/
+/_/ /_/\____/|__/|__/\__,_/\__, (_)
+                          /____/
+
+Hidden experiment — a screen-print / overprint redesign of the homepage.
+Not linked from the live site. Two inks (neon orange + turquoise) printed on
+cream paper, overlaps multiply into brown. Have fun poking around!
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hidden experiment: keep it out of search results -->
+    <meta name="robots" content="noindex">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLN1LR5XT6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-TLN1LR5XT6');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/screenprint.css">
+
+    <link rel="icon" type="image/png" href="./favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./favicon-32x32.png" sizes="32x32">
+
+    <title>Jonny Abowd — Overprint Edition</title>
+    <meta name="description" content="A screen-print redesign of Jonny Abowd's portfolio. Product Design Lead, problem solver, and high five enthusiast.">
+</head>
+
+<body class="sp">
+
+    <!-- registration-mark frame around the whole page -->
+    <div class="sp-frame" aria-hidden="true"></div>
+
+    <!-- custom crosshair cursor -->
+    <div class="sp-cursor" id="spCursor" aria-hidden="true">
+        <svg viewBox="0 0 34 34" fill="none">
+            <g class="ring">
+                <circle cx="17" cy="17" r="12" stroke="#ff5a1e" stroke-width="2"/>
+                <circle cx="17" cy="17" r="12" stroke="#16d6c1" stroke-width="2" transform="translate(1.5,1.5)"/>
+            </g>
+            <line x1="17" y1="0" x2="17" y2="10" stroke="#2e1a0c" stroke-width="2"/>
+            <line x1="17" y1="24" x2="17" y2="34" stroke="#2e1a0c" stroke-width="2"/>
+            <line x1="0" y1="17" x2="10" y2="17" stroke="#2e1a0c" stroke-width="2"/>
+            <line x1="24" y1="17" x2="34" y2="17" stroke="#2e1a0c" stroke-width="2"/>
+        </svg>
+    </div>
+
+    <!-- ============================= NAV ============================= -->
+    <nav class="sp-nav">
+        <div class="brand">JONNY<b>*</b>ABOWD</div>
+        <div class="links">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- ============================= HERO ============================= -->
+    <header class="sp-hero">
+        <div class="sp-wrap">
+            <div class="hero-meta">
+                <span>PORTFOLIO <b>№01</b></span>
+                <span>EST. <b>2007</b></span>
+                <span>2 INKS / 1 PASS</span>
+                <span>PRODUCT DESIGN</span>
+                <span>AUSTIN · TX</span>
+                <span>HIGH-FIVE READY</span>
+            </div>
+
+            <div class="hero-howdy">Howdy — my name is 👋</div>
+
+            <h1 class="hero-name" aria-label="Jonny Abowd">
+                <span class="l1" data-text="JONNY">JONNY</span>
+                <span class="l2">ABOWD</span>
+            </h1>
+
+            <p class="hero-role">Product Design Lead <em>&amp;</em> High-Five Enthusiast</p>
+
+            <!-- big/small: giant name above, tiny engraved doodles floating -->
+            <div class="doodle d-arrow" aria-hidden="true">
+                <svg viewBox="0 0 200 40" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M2 20 H184" stroke-linecap="round"/>
+                    <path d="M170 8 L190 20 L170 32" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 20 L18 12 M2 20 L18 28" stroke-linecap="round"/>
+                    <path d="M40 20 L36 14 M40 20 L36 26 M64 20 L60 14 M64 20 L60 26" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="doodle d-star" aria-hidden="true">
+                <svg viewBox="0 0 60 60" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M30 2 L36 24 L58 30 L36 36 L30 58 L24 36 L2 30 L24 24 Z" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="doodle d-spark" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="currentColor">
+                    <path d="M20 0 C21 14 26 19 40 20 C26 21 21 26 20 40 C19 26 14 21 0 20 C14 19 19 14 20 0 Z"/>
+                </svg>
+            </div>
+            <div class="doodle d-eye" aria-hidden="true">
+                <svg viewBox="0 0 80 48" fill="none" stroke="currentColor" stroke-width="3">
+                    <path d="M4 24 C20 4 60 4 76 24 C60 44 20 44 4 24 Z" stroke-linejoin="round"/>
+                    <circle cx="40" cy="24" r="9"/>
+                    <circle cx="40" cy="24" r="2.5" fill="currentColor"/>
+                    <path d="M40 2 v6 M62 8 l-4 5 M18 8 l4 5" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <figure class="hero-portrait" aria-hidden="false">
+                <div class="duotone">
+                    <img src="/images/ja-profile-photo.webp?v=2" alt="Portrait of Jonny Abowd, rendered as a two-color screen print">
+                </div>
+            </figure>
+        </div>
+    </header>
+
+    <!-- ============================ MARQUEE ============================ -->
+    <div class="sp-marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>CURIOSITY</span><span>STRATEGY</span><span>OPTIMISM</span><span>DESIGN SYSTEMS</span><span>HIGH FIVES</span>
+            <span>CURIOSITY</span><span>STRATEGY</span><span>OPTIMISM</span><span>DESIGN SYSTEMS</span><span>HIGH FIVES</span>
+        </div>
+    </div>
+
+    <!-- ============================= ABOUT ============================= -->
+    <section class="sp-section" id="about">
+        <div class="sp-wrap">
+            <div class="section-head reveal">
+                <h2>The <span class="hl">Story</span></h2>
+                <div class="section-num">SECTION<b>01</b>ABOUT</div>
+            </div>
+
+            <div class="bio-grid">
+                <p class="bio-lead reveal">
+                    <span class="big">I&rsquo;ve spent <span id="years-exp"></span>+ years</span>
+                    tackling complex design challenges with a mix of curiosity, strategy,
+                    and a stubborn streak of optimism.
+                </p>
+                <div class="bio-body reveal">
+                    <p>
+                        Along the way I&rsquo;ve led teams, built systems, and shipped
+                        experiences that make life a little easier for millions of people.
+                        I believe creativity can solve problems of every shape and size &mdash;
+                        and that we should have a good time doing it.
+                    </p>
+                    <p>
+                        Fancy a conversation? <a href="#contact" class="link-under">Contact me</a> anytime.
+                    </p>
+                    <div class="stat-row">
+                        <div class="stat"><b><span id="years-exp-2"></span>+</b> years designing</div>
+                        <div class="stat"><b>9</b> featured projects</div>
+                        <div class="stat"><b>∞</b> high fives given</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================= WORK ============================= -->
+    <section class="sp-section alt" id="work">
+        <div class="sp-wrap">
+            <div class="section-head reveal">
+                <h2>Featured <span class="hl">Work</span></h2>
+                <div class="section-num">SECTION<b>02</b>PROJECTS</div>
+            </div>
+
+            <div class="work-grid reveal">
+                <a href="/projects/checkouttemplates.html" class="work-card">
+                    <span class="work-num">01</span>
+                    <span class="work-ico"><img src="/images/icon-templates.svg" alt=""></span>
+                    <h3 class="work-title">Checkout Templates</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/shoppingmobileapp.html" class="work-card">
+                    <span class="work-num">02</span>
+                    <span class="work-ico"><img src="/images/icon-cart.svg" alt=""></span>
+                    <h3 class="work-title">Shopping Mobile App</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/hueyweather.html" class="work-card">
+                    <span class="work-num">03</span>
+                    <span class="work-ico"><img src="/images/icon-cloud.svg" alt=""></span>
+                    <h3 class="work-title">HUEY Weather</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/autoloantools.html" class="work-card">
+                    <span class="work-num">04</span>
+                    <span class="work-ico"><img src="/images/icon-wheel.svg" alt=""></span>
+                    <h3 class="work-title">Auto Loan Tools</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/connectingflight.html" class="work-card">
+                    <span class="work-num">05</span>
+                    <span class="work-ico"><img src="/images/icon-plane.svg" alt=""></span>
+                    <h3 class="work-title">Connecting Flight</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/skylanders3Dadventure.html" class="work-card">
+                    <span class="work-num">06</span>
+                    <span class="work-ico"><img src="/images/icon-3d.svg" alt=""></span>
+                    <h3 class="work-title">Skylanders 3D Adventure</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/monsterproject.html" class="work-card">
+                    <span class="work-num">07</span>
+                    <span class="work-ico"><img src="/images/icon-monster.svg" alt=""></span>
+                    <h3 class="work-title">The Monster Project</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/visualdesign.html" class="work-card">
+                    <span class="work-num">08</span>
+                    <span class="work-ico"><img src="/images/icon-logo.svg" alt=""></span>
+                    <h3 class="work-title">Visual Design &amp; Branding</h3>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="/projects/generatormakerspace.html" class="work-card">
+                    <span class="work-num">09</span>
+                    <span class="work-ico"><img src="/images/icon-bolt.svg" alt=""></span>
+                    <h3 class="work-title">Generator Makerspace</h3>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ CLIENTS ============================ -->
+    <section class="sp-section" id="clients">
+        <div class="sp-wrap">
+            <div class="section-head reveal">
+                <h2>In Good <span class="hl">Company</span></h2>
+                <div class="section-num">SECTION<b>03</b>CLIENTS</div>
+            </div>
+            <div class="client-grid reveal">
+                <div class="client-cell"><img src="/images/client-logos/ja-client-att.svg" alt="AT&amp;T"></div>
+                <div class="client-cell"><img src="/images/client-logos/ja-client-cof.svg" alt="Capital One"></div>
+                <div class="client-cell"><img src="/images/client-logos/ja-client-dan.svg" alt="Dannon"></div>
+                <div class="client-cell"><img src="/images/client-logos/ja-client-fl.svg" alt="Frito Lay"></div>
+                <div class="client-cell"><img src="/images/client-logos/ja-client-goog.svg" alt="Google"></div>
+                <div class="client-cell"><img src="/images/client-logos/ja-client-sf.svg" alt="State Farm"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ CONTACT ============================ -->
+    <section class="sp-section alt" id="contact">
+        <div class="sp-wrap">
+            <div class="section-head reveal">
+                <h2>Say <span class="hl">Hello</span></h2>
+                <div class="section-num">SECTION<b>04</b>CONTACT</div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-copy reveal">
+                    <p>
+                        Creativity can solve problems of all shapes and sizes, and I believe
+                        we should have fun while designing the solutions.
+                    </p>
+                    <p>
+                        If humor, authenticity, and empathy are your thing, let&rsquo;s connect!
+                        Find me on
+                        <a href="https://www.linkedin.com/in/jonnyabowd/" class="link-under" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        or drop me a note.
+                    </p>
+                    <p>Looking forward to connecting,</p>
+                    <img class="sig" src="/images/ja-sig.svg" alt="Jonny">
+                </div>
+
+                <script type="text/javascript">var submitted = false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                    onload="if(submitted){window.location='/projects/thankyou.html';}"></iframe>
+                <form class="sp-form reveal"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLScf3ShGME4sEZULNA0agURy5oIzRbovVPlR0Q6P1UQpXrw2iQ/formResponse"
+                    method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                    <div class="field">
+                        <label for="c-name">Name</label>
+                        <input id="c-name" type="text" name="entry.1881999062" required>
+                    </div>
+                    <div class="field">
+                        <label for="c-email">Email</label>
+                        <input id="c-email" type="email" name="entry.518998491" required>
+                    </div>
+                    <div class="field">
+                        <label for="c-msg">Message</label>
+                        <textarea id="c-msg" name="entry.1638262852" required></textarea>
+                    </div>
+                    <button class="sp-btn" type="submit">Send it →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="sp-footer">
+        <div class="sp-wrap">
+            <p class="big-mark">JA*</p>
+            <div class="foot-meta">
+                © JONNY ABOWD <span id="copyright-year"></span><br>
+                <a href="https://www.linkedin.com/in/jonnyabowd/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                / <a href="#contact">CONTACT</a><br>
+                SCREEN-PRINT EDITION — 2 INKS ON CREAM
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Years of experience + copyright year (matches the live homepage math)
+        var yrs = new Date().getFullYear() - 2007;
+        ['years-exp', 'years-exp-2'].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) el.textContent = yrs;
+        });
+        var cy = document.getElementById('copyright-year');
+        if (cy) cy.textContent = new Date().getFullYear();
+
+        // Scroll reveal
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!reduce && 'IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+                });
+            }, { threshold: 0.12 });
+            document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+        } else {
+            document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+        }
+
+        // Custom crosshair cursor (desktop / fine-pointer only)
+        var fine = window.matchMedia('(hover: hover) and (pointer: fine)');
+        if (fine.matches) {
+            var cur = document.getElementById('spCursor');
+            var hx = 0, hy = 0, shown = false;
+            var HOVER = 'a, button, input, textarea, label, .work-card, .stat, .client-cell';
+            document.addEventListener('mousemove', function (e) {
+                hx = e.clientX; hy = e.clientY;
+                cur.style.transform = 'translate(' + hx + 'px,' + hy + 'px)';
+                if (!shown) { shown = true; cur.classList.add('is-visible'); }
+                var hot = e.target.closest && e.target.closest(HOVER);
+                cur.classList.toggle('is-hot', !!hot);
+            });
+            document.addEventListener('mouseleave', function () { cur.classList.remove('is-visible'); shown = false; });
+        }
+    </script>
+</body>
+
+</html>
