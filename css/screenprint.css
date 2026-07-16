@@ -168,25 +168,14 @@ a { color: inherit; }
     letter-spacing: -0.5px;
     text-transform: uppercase;
     white-space: nowrap;
-    color: var(--ink-orange);
-    /* neon glow — the "sign" is lit by default */
-    text-shadow:
-        0 0 4px color-mix(in srgb, var(--ink-orange) 70%, transparent),
-        0 0 12px color-mix(in srgb, var(--ink-orange) 55%, transparent),
-        0 0 22px color-mix(in srgb, var(--ink-orange) 35%, transparent);
-    transition: opacity .06s steps(1), text-shadow .06s steps(1), color .06s steps(1);
+    color: var(--brown);
+    transition: opacity .06s steps(1);
 }
-.sp-nav .brand b { color: var(--ink-teal); }
-/* Flicker states toggled by JS at random intervals, like a failing neon tube */
-.sp-nav .brand.flicker-off {
-    opacity: 0.28;
-    color: color-mix(in srgb, var(--ink-orange) 45%, var(--brown));
-    text-shadow: none;
-}
-.sp-nav .brand.flicker-dim {
-    opacity: 0.6;
-    text-shadow: 0 0 3px color-mix(in srgb, var(--ink-orange) 40%, transparent);
-}
+.sp-nav .brand b { color: var(--ink-orange); }
+/* Flicker states toggled by JS at random intervals — a plain neon-sign blink,
+   no glow: the sign just cuts out and comes back. */
+.sp-nav .brand.flicker-off { opacity: 0.12; }
+.sp-nav .brand.flicker-dim { opacity: 0.5; }
 .sp-nav .links {
     display: flex;
     gap: 26px;
@@ -197,7 +186,7 @@ a { color: inherit; }
 }
 @media (prefers-reduced-motion: reduce) {
     .sp-nav .brand.flicker-off,
-    .sp-nav .brand.flicker-dim { opacity: 1; color: var(--ink-orange); }
+    .sp-nav .brand.flicker-dim { opacity: 1; }
 }
 .sp-nav .links a {
     text-decoration: none;
