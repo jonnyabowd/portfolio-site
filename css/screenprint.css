@@ -300,7 +300,10 @@ a { color: inherit; }
     margin: 0;
     position: relative;
     z-index: 3;
-    text-align: center;
+    text-align: left;
+    /* slight clockwise tilt to the whole wordmark */
+    transform: rotate(3deg);
+    transform-origin: center;
 }
 .hero-name .l1 {
     display: block;
@@ -313,7 +316,8 @@ a { color: inherit; }
     font-size: clamp(72px, 15vw, 220px);
     color: var(--ink-teal-deep);
     mix-blend-mode: multiply;
-    margin-left: 0.06em;
+    /* stagger ABOWD to the right, under the tail of JONNY */
+    margin-left: 1.4em;
 }
 /* mis-registration ghost — a second offset impression of the name */
 .hero-name .l1,
@@ -341,6 +345,10 @@ a { color: inherit; }
 .hero-role em {
     font-style: italic;
     color: var(--ink-orange);
+}
+/* Tighten the ABOWD stagger on small screens so it doesn't run off the edge */
+@media (max-width: 640px) {
+    .hero-name .l2 { margin-left: 0.7em; }
 }
 
 /* Duotone portrait, floated into the hero on larger screens */
