@@ -332,14 +332,14 @@ a { color: inherit; }
     mix-blend-mode: multiply;
     /* shift JONNY left of center; ABOWD shifts right the same amount, so the
        staggered pair stays centered on the page as a group */
-    left: -0.7em;
+    left: -0.35em;
 }
 .hero-name .l2 {
     display: block;
     font-size: clamp(72px, 15vw, 220px);
     color: var(--ink-teal-deep);
     mix-blend-mode: multiply;
-    left: 0.7em;
+    left: 0.35em;
 }
 /* mis-registration ghost — a second offset impression of the name */
 .hero-name .l1,
