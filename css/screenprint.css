@@ -193,8 +193,9 @@ a { color: inherit; }
     position: absolute;
     top: 50%;
     height: 7px;
-    /* reach outward from the wordmark to the page frame's vertical border */
-    width: calc(50vw - 104px);
+    /* reach outward from the wordmark to align with the inner edge of the page
+       frame's vertical border (the brown square), matching its inset */
+    width: calc(50vw - 107px);
     background: var(--ink-teal);
     opacity: 0;
     transition: opacity .3s ease, transform .3s ease;
