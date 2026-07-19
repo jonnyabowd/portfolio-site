@@ -290,6 +290,23 @@ a { color: inherit; }
     margin-bottom: 12px;
 }
 
+/* SVG hand replacing the wave emoji in the howdy tag — brown ink, gently waves */
+.hero-hand {
+    width: 1.15em;
+    height: 1.15em;
+    vertical-align: -0.22em;
+    margin-left: 3px;
+    transform-origin: 60% 85%;
+    animation: wave 2.6s ease-in-out infinite;
+}
+@keyframes wave {
+    0%, 65%, 100% { transform: rotate(0deg); }
+    72% { transform: rotate(14deg); }
+    79% { transform: rotate(-8deg); }
+    86% { transform: rotate(12deg); }
+    93% { transform: rotate(-4deg); }
+}
+
 /* The giant name — the whole point of the scale contrast */
 .hero-name {
     font-family: var(--font-mega);
