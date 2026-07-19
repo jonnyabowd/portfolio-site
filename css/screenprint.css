@@ -174,9 +174,9 @@ a { color: inherit; }
     transition: opacity .06s steps(1);
 }
 .sp-nav .brand-pizza {
-    width: 1.25em;
-    height: 1.25em;
-    vertical-align: -0.3em;
+    width: 0.82em;
+    height: 0.82em;
+    vertical-align: -0.08em;
     margin: 0 3px;
 }
 /* Flicker states toggled by JS at random intervals — a plain neon-sign blink,
