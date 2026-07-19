@@ -173,7 +173,12 @@ a { color: inherit; }
     color: var(--brown);
     transition: opacity .06s steps(1);
 }
-.sp-nav .brand b { color: var(--ink-orange); }
+.sp-nav .brand-pizza {
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: -0.3em;
+    margin: 0 3px;
+}
 /* Flicker states toggled by JS at random intervals — a plain neon-sign blink,
    no glow: the sign just cuts out and comes back. */
 .sp-nav .brand.flicker-off { opacity: 0.12; }
