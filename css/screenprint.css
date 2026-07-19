@@ -193,7 +193,8 @@ a { color: inherit; }
     position: absolute;
     top: 50%;
     height: 7px;
-    width: clamp(28px, 5vw, 90px);
+    /* reach outward from the wordmark to the page frame's vertical border */
+    width: calc(50vw - 104px);
     background: var(--ink-teal);
     opacity: 0;
     transition: opacity .3s ease, transform .3s ease;
@@ -215,18 +216,15 @@ a { color: inherit; }
     opacity: 1;
     transform: translateY(-50%) scaleX(1);
 }
-/* In the mid-width band the nav links are still shown but the centered wordmark
-   sits close to them, so suppress the flanking lines there to avoid collision.
-   They return on wide desktop and on phones (where the links are hidden). */
-@media (min-width: 681px) and (max-width: 1079px) {
-    .sp-nav.is-scrolled .brand::before,
-    .sp-nav.is-scrolled .brand::after {
-        opacity: 0;
-        transform: translateY(-50%) scaleX(0);
-    }
+/* The full-length lines would run through the nav links, so fade the links out
+   while the lines are shown (scrolled down) and bring them back at the top. */
+.sp-nav.is-scrolled .links {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sp-nav .links {
+    transition: opacity .3s ease;
     display: flex;
     gap: 26px;
     font-family: var(--font-mono);
