@@ -292,10 +292,10 @@ a { color: inherit; }
 
 /* SVG hand replacing the wave emoji in the howdy tag — brown ink, gently waves */
 .hero-hand {
-    width: 1.15em;
-    height: 1.15em;
-    vertical-align: -0.22em;
-    margin-left: 3px;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.12em;
+    margin-left: 4px;
     transform-origin: 60% 85%;
     animation: wave 2.6s ease-in-out infinite;
 }
