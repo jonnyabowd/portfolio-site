@@ -351,6 +351,17 @@ cream paper, overlaps multiply into brown. Have fun poking around!
             scheduleFlicker();
         }
 
+        // Flanking turquoise lines on the sticky wordmark: show once the page is
+        // scrolled off the top, hide again exactly at 0px.
+        var nav = document.querySelector('.sp-nav');
+        if (nav) {
+            var syncNavScroll = function () {
+                nav.classList.toggle('is-scrolled', window.scrollY > 0);
+            };
+            window.addEventListener('scroll', syncNavScroll, { passive: true });
+            syncNavScroll();
+        }
+
         // Scroll reveal
         if (!reduce && 'IntersectionObserver' in window) {
             var io = new IntersectionObserver(function (entries) {
