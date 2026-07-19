@@ -178,6 +178,49 @@ a { color: inherit; }
    no glow: the sign just cuts out and comes back. */
 .sp-nav .brand.flicker-off { opacity: 0.12; }
 .sp-nav .brand.flicker-dim { opacity: 0.5; }
+
+/* Thick turquoise rules flanking the wordmark — hidden at the very top of the
+   page, wiped in from the center once the page is scrolled (JS toggles the
+   .is-scrolled class on the nav). */
+.sp-nav .brand::before,
+.sp-nav .brand::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 7px;
+    width: clamp(28px, 5vw, 90px);
+    background: var(--ink-teal);
+    opacity: 0;
+    transition: opacity .3s ease, transform .3s ease;
+}
+.sp-nav .brand::before {
+    right: 100%;
+    margin-right: 16px;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right center;
+}
+.sp-nav .brand::after {
+    left: 100%;
+    margin-left: 16px;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left center;
+}
+.sp-nav.is-scrolled .brand::before,
+.sp-nav.is-scrolled .brand::after {
+    opacity: 1;
+    transform: translateY(-50%) scaleX(1);
+}
+/* In the mid-width band the nav links are still shown but the centered wordmark
+   sits close to them, so suppress the flanking lines there to avoid collision.
+   They return on wide desktop and on phones (where the links are hidden). */
+@media (min-width: 681px) and (max-width: 1079px) {
+    .sp-nav.is-scrolled .brand::before,
+    .sp-nav.is-scrolled .brand::after {
+        opacity: 0;
+        transform: translateY(-50%) scaleX(0);
+    }
+}
+
 .sp-nav .links {
     display: flex;
     gap: 26px;
